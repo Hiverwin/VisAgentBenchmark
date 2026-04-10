@@ -1,0 +1,52 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Is bmi relevant to insurance charges ?",
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "point",
+    "filled": true,
+    "opacity": 0.7
+  },
+  "encoding": {
+    "x": {
+      "field": "bmi",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "y": {
+      "field": "charges",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "color": {
+      "field": "smoker",
+      "type": "nominal",
+      "scale": {}
+    },
+    "size": {
+      "field": "children",
+      "type": "quantitative"
+    },
+    "tooltip": [
+      {
+        "field": "bmi",
+        "type": "quantitative"
+      },
+      {
+        "field": "charges",
+        "type": "quantitative"
+      },
+      {
+        "field": "smoker",
+        "type": "nominal"
+      },
+      {
+        "field": "children",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Heatmap: BMI by Workout_Type and Experience_Level",
+  "width": 600,
+  "height": 400,
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "Workout_Type",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "Experience_Level",
+      "type": "nominal",
+      "scale": {}
+    },
+    "color": {
+      "aggregate": "mean",
+      "field": "BMI",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "blues"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Workout_Type",
+        "type": "nominal"
+      },
+      {
+        "field": "Experience_Level",
+        "type": "nominal"
+      },
+      {
+        "field": "BMI",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

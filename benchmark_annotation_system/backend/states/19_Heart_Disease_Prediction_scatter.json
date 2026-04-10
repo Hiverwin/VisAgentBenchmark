@@ -1,0 +1,52 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Scatter Plot: Age vs Cholesterol",
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "point",
+    "filled": true,
+    "opacity": 0.7
+  },
+  "encoding": {
+    "x": {
+      "field": "Age",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "y": {
+      "field": "Cholesterol",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "color": {
+      "field": "Heart Disease",
+      "type": "nominal",
+      "scale": {}
+    },
+    "size": {
+      "field": "Chest pain type",
+      "type": "quantitative"
+    },
+    "tooltip": [
+      {
+        "field": "Age",
+        "type": "quantitative"
+      },
+      {
+        "field": "Cholesterol",
+        "type": "quantitative"
+      },
+      {
+        "field": "Heart Disease",
+        "type": "nominal"
+      },
+      {
+        "field": "Chest pain type",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

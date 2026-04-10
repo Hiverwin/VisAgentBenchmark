@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Stock Prices 2023",
+  "width": 550,
+  "height": 350,
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "scale": {}
+    },
+    "y": {
+      "field": "price",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "color": {
+      "field": "company",
+      "type": "nominal",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "date",
+        "type": "temporal"
+      },
+      {
+        "field": "price",
+        "type": "quantitative"
+      },
+      {
+        "field": "company",
+        "type": "nominal"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

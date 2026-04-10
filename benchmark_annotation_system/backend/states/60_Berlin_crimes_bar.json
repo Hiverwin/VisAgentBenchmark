@@ -1,0 +1,33 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Bar Chart: Fire by District",
+  "width": 600,
+  "height": 400,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "District",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "Fire",
+      "type": "quantitative",
+      "aggregate": "mean",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "District",
+        "type": "nominal"
+      },
+      {
+        "field": "Fire",
+        "type": "quantitative",
+        "aggregate": "mean"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

@@ -1,0 +1,54 @@
+{
+  "task_type": "clear_single",
+  "task_id": "102_sankey_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/102_sankey_saas.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use highlight_path in order to know Use highlight_path with path equal to Google Ads, Active (High), Upgraded (Pro), Loyal, Renewed to observe which product line receives the largest amount from Loyal.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Renewed",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_path",
+            "reasoning": "Use highlight_path to trace the path from Google Ads to Renewed and identify the largest flow from Loyal"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_path",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "path": [
+                    "Google Ads",
+                    "Active (High)",
+                    "Upgraded (Pro)",
+                    "Loyal",
+                    "Renewed"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {}
+        }
+      }
+    }
+  ]
+}

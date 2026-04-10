@@ -1,0 +1,32 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Bar Chart: followers by company",
+  "width": 600,
+  "height": 400,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "company",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "followers",
+      "type": "quantitative",
+      "aggregate": "mean",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "company",
+        "type": "nominal"
+      },
+      {
+        "field": "followers",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

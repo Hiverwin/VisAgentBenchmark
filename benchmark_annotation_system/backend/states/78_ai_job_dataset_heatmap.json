@@ -1,0 +1,148 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "AI Job Market Skill Demand Heatmap",
+    "subtitle": "Relative demand score (0–100) for key skills across major AI roles",
+    "color": "#e8e6e1",
+    "subtitleColor": "#7a7a8a",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "anchor": "start",
+    "offset": 16
+  },
+  "width": 680,
+  "height": 420,
+  "background": "#0e0f1a",
+  "config": {
+    "font": "DM Sans",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "ticks": false,
+      "labelColor": "#9a9aaa",
+      "labelFontSize": 11.5,
+      "labelFontWeight": 400,
+      "titleColor": "#7a7a8a",
+      "titleFontSize": 12,
+      "titleFontWeight": 500,
+      "titlePadding": 14,
+      "gridColor": "#1e1f30"
+    }
+  },
+  "mark": {
+    "type": "rect",
+    "cornerRadius": 3,
+    "stroke": "#0e0f1a",
+    "strokeWidth": 2.5
+  },
+  "encoding": {
+    "x": {
+      "field": "skill",
+      "type": "nominal",
+      "sort": [
+        "Python",
+        "PyTorch",
+        "TensorFlow",
+        "LLM/GenAI",
+        "NLP",
+        "Computer Vision",
+        "SQL",
+        "Cloud (AWS/GCP)",
+        "Docker/K8s",
+        "Statistics"
+      ],
+      "axis": {
+        "orient": "top",
+        "title": null,
+        "labelAngle": -35,
+        "labelPadding": 8
+      },
+      "scale": {}
+    },
+    "y": {
+      "field": "role",
+      "type": "nominal",
+      "sort": [
+        "ML Engineer",
+        "AI Researcher",
+        "NLP Engineer",
+        "CV Engineer",
+        "Data Scientist",
+        "Data Engineer",
+        "MLOps Engineer",
+        "AI Product Manager"
+      ],
+      "axis": {
+        "title": null,
+        "labelPadding": 12,
+        "labelFontSize": 12
+      },
+      "scale": {}
+    },
+    "color": {
+      "field": "demand",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          10,
+          20,
+          30,
+          45,
+          55,
+          65,
+          75,
+          85,
+          100
+        ],
+        "range": [
+          "#1B1F3B",
+          "#2A4A7F",
+          "#3C78B5",
+          "#5BAACC",
+          "#8ED1C0",
+          "#F0F0D0",
+          "#FDD576",
+          "#F5A623",
+          "#E8712B",
+          "#D13B29",
+          "#7A0C1E"
+        ],
+        "interpolate": "lab"
+      },
+      "legend": {
+        "title": "Demand Score",
+        "titleColor": "#9a9aaa",
+        "titleFontSize": 11,
+        "labelColor": "#7a7a8a",
+        "labelFontSize": 10,
+        "gradientLength": 260,
+        "gradientThickness": 12,
+        "orient": "bottom",
+        "direction": "horizontal",
+        "offset": 16
+      }
+    },
+    "tooltip": [
+      {
+        "field": "role",
+        "type": "nominal",
+        "title": "Role"
+      },
+      {
+        "field": "skill",
+        "type": "nominal",
+        "title": "Skill"
+      },
+      {
+        "field": "demand",
+        "type": "quantitative",
+        "title": "Demand Score"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

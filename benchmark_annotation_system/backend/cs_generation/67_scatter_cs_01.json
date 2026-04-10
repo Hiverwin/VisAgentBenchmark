@@ -1,0 +1,60 @@
+{
+  "task_type": "clear_single",
+  "task_id": "67_scatter_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/67_vitamin_deficiency_disease_dataset_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use zoom_2d_region with x_range from 100.0 to 150.0, y_range from 100.0 to 150.0 in order to know Use zoom_2d_region with x_range from 100 to 150, y_range from 100 to 150 to determine which gender has more data points in the high vitamin A and E region.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Female",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_2d_region",
+            "reasoning": "Zoom into the high vitamin A and E region to compare the distribution between genders"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_2d_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    100.0,
+                    150.0
+                  ],
+                  "y_range": [
+                    100.0,
+                    150.0
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "vitamin_a_percent_rda",
+            "y": "vitamin_e_percent_rda",
+            "color": "gender",
+            "size": "symptoms_count"
+          }
+        }
+      }
+    }
+  ]
+}

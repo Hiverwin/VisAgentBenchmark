@@ -1,0 +1,53 @@
+{
+  "task_type": "clear_single",
+  "task_id": "56_heatmap_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/56_Ecommerce_Delivery_Analytics_New_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use highlight_region_by_value with min_value equal to 595.0 in order to know Use highlight_region_by_value with min_value equal to 595 to see how many cells have mean Order Value greater than 595 INR.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "2 cells",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_region_by_value",
+            "reasoning": "Highlight cells with mean Order Value greater than 595 INR and count them"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_region_by_value",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "min_value": 595.0,
+                  "outside_opacity": 0.12
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Platform",
+            "y": "Service Rating",
+            "color": "Order Value (INR)"
+          }
+        }
+      }
+    }
+  ]
+}

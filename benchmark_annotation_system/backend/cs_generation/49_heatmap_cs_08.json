@@ -1,0 +1,56 @@
+{
+  "task_type": "clear_single",
+  "task_id": "49_heatmap_cs_08",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/49_coffee_sales_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_08",
+      "question": "Use add_marginal_bars in order to know Use add_marginal_bars with show_top equal to True, show_right equal to True to determine which coffee type has the highest average money.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Hot Chocolate",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "add_marginal_bars",
+            "reasoning": "Add marginal bars to identify which coffee type has the highest average money"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "add_marginal_bars",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "op": "mean",
+                  "show_top": true,
+                  "show_right": true,
+                  "bar_size": 70,
+                  "bar_color": "#666666"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "coffee_name",
+            "y": "Time_of_Day",
+            "color": "money"
+          }
+        }
+      }
+    }
+  ]
+}

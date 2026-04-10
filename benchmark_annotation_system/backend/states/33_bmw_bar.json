@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Bar Chart: mpg by model",
+  "width": 600,
+  "height": 400,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "model",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "mpg",
+      "type": "quantitative",
+      "aggregate": "sum",
+      "scale": {}
+    },
+    "color": {
+      "field": "fuelType",
+      "type": "nominal",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "model",
+        "type": "nominal"
+      },
+      {
+        "field": "mpg",
+        "type": "quantitative",
+        "aggregate": "sum"
+      },
+      {
+        "field": "fuelType",
+        "type": "nominal"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Line Chart: Employment_Thousands over Year",
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "y": {
+      "field": "Employment_Thousands",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "color": {
+      "field": "Country",
+      "type": "nominal",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "Year",
+        "type": "quantitative"
+      },
+      {
+        "field": "Employment_Thousands",
+        "type": "quantitative"
+      },
+      {
+        "field": "Country",
+        "type": "nominal"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

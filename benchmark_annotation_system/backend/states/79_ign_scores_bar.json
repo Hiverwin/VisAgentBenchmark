@@ -1,0 +1,32 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Bar Chart: Action by Platform",
+  "width": 600,
+  "height": 400,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Platform",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "Action",
+      "type": "quantitative",
+      "aggregate": "mean",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "Platform",
+        "type": "nominal"
+      },
+      {
+        "field": "Action",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

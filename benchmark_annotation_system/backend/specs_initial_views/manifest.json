@@ -1,0 +1,728 @@
+[
+  {
+    "file": "01_scatter_cars.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/01_scatter_cars.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "02_bar_sales.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/02_bar_sales.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "03_line_stocks.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/03_line_stocks.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "04_heatmap_temp.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/04_heatmap_temp.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "05_sankey_ecommercial.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/05_sankey_ecommercial.png",
+    "renderer": "vega-cli (vg2png)"
+  },
+  {
+    "file": "06_parallel_penguins.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/06_parallel_penguins.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "07_bar_synthetic_mental_health.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/07_bar_synthetic_mental_health.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "08_heatmap_synthetic_mental_health.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/08_heatmap_synthetic_mental_health.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "09_museum_visitors_line.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/09_museum_visitors_line.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "100_sankey_patient.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/100_sankey_patient.png",
+    "renderer": "vega-cli (vg2png)"
+  },
+  {
+    "file": "101_sankey_credit.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/101_sankey_credit.png",
+    "renderer": "vega-cli (vg2png)"
+  },
+  {
+    "file": "102_sankey_saas.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/102_sankey_saas.png",
+    "renderer": "vega-cli (vg2png)"
+  },
+  {
+    "file": "103_sankey_university.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/103_sankey_university.png",
+    "renderer": "vega-cli (vg2png)"
+  },
+  {
+    "file": "104_gender_gap_in_life_line.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/104_gender_gap_in_life_line.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "105_gini_filter_line.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/105_gini_filter_line.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "106_life expectancey_line.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/106_life expectancey_line.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "107_survive_to_65_line.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/107_survive_to_65_line.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "108_insurance_sankey.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/108_insurance_sankey.png",
+    "renderer": "vega-cli (vg2png)"
+  },
+  {
+    "file": "109_sankey_seo.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/109_sankey_seo.png",
+    "renderer": "vega-cli (vg2png)"
+  },
+  {
+    "file": "10_scatter_synthetic_mental_health.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/10_scatter_synthetic_mental_health.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "110_sankey_trash.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/110_sankey_trash.png",
+    "renderer": "vega-cli (vg2png)"
+  },
+  {
+    "file": "111_heatmap_tmp.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/111_heatmap_tmp.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "112_anmie_filter_bar.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/112_anmie_filter_bar.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "113_nime_less_parallel.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/113_nime_less_parallel.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "114_sport_life_parallel.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/114_sport_life_parallel.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "115_sport_life_bar.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/115_sport_life_bar.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "116_startup_funding_dataset_bar.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/116_startup_funding_dataset_bar.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "117_startup_funding_dataset_parallel.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/117_startup_funding_dataset_parallel.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "118_sankey_semiconducto.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/118_sankey_semiconducto.png",
+    "renderer": "vega-cli (vg2png)"
+  },
+  {
+    "file": "119_sankey_game.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/119_sankey_game.png",
+    "renderer": "vega-cli (vg2png)"
+  },
+  {
+    "file": "11_apple_time_line.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/11_apple_time_line.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "120_startup_Funding.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/120_startup_Funding.png",
+    "renderer": "vega-cli (vg2png)"
+  },
+  {
+    "file": "121_scatter_custom_focus_demo.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/121_scatter_custom_focus_demo.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "12_sankey_micro.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/12_sankey_micro.png",
+    "renderer": "vega-cli (vg2png)"
+  },
+  {
+    "file": "13_supply_chain_data_heatmap.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/13_supply_chain_data_heatmap.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "14_museum_visitors_line_multi.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/14_museum_visitors_line_multi.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "15_sankey_government.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/15_sankey_government.png",
+    "renderer": "vega-cli (vg2png)"
+  },
+  {
+    "file": "16_bar_Chocolate Sales.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/16_bar_Chocolate Sales.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "17_Heart_Disease_Prediction_bar.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/17_Heart_Disease_Prediction_bar.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "18_Heart_Disease_Prediction_parallel.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/18_Heart_Disease_Prediction_parallel.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "19_Heart_Disease_Prediction_scatter.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/19_Heart_Disease_Prediction_scatter.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "20_ign_scores_bar.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/20_ign_scores_bar.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "21_Number of trees sold over Yea_line.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/21_Number of trees sold over Yea_line.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "22_Employee_Attrition_DataSet_scatter.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/22_Employee_Attrition_DataSet_scatter.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "23_Mobiles Dataset (2025)_bar.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/23_Mobiles Dataset (2025)_bar.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "24_vitamin_deficiency_disease_dataset_20260123_parallel (3).json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/24_vitamin_deficiency_disease_dataset_20260123_parallel (3).png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "25_gym_members_exercise_tracking_bar.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/25_gym_members_exercise_tracking_bar.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "26_China_centra_death_rate_line.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/26_China_centra_death_rate_line.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "27_coffee_sales_data_bar.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/27_coffee_sales_data_bar.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "28_silver_prices_data_line.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/28_silver_prices_data_line.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "29_students_ai_usage_parallel.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/29_students_ai_usage_parallel.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "30_vitamin_deficiency_disease_dataset_20260123_bar.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/30_vitamin_deficiency_disease_dataset_20260123_bar.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "31_TSLA_Stock_line.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/31_TSLA_Stock_line.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "32_insurance_scatter.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/32_insurance_scatter.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "33_bmw_bar.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/33_bmw_bar.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "34_bmw_scatter.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/34_bmw_scatter.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "35_bmw_parallel.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/35_bmw_parallel.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "36_cancer_scatter.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/36_cancer_scatter.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "37_cancer_parallel .json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/37_cancer_parallel .png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "38_cancer_scatter.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/38_cancer_scatter.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "39_insurance_parallel.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/39_insurance_parallel.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "40_insurance_heatmap.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/40_insurance_heatmap.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "41_museum_visitors_scatter.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/41_museum_visitors_scatter.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "42_pokemon_stats_2025_bar.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/42_pokemon_stats_2025_bar.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "43_iris_parallel.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/43_iris_parallel.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "44_Sensitivity_Soil_Nutrient_Pools new_heatmap.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/44_Sensitivity_Soil_Nutrient_Pools new_heatmap.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "45_ ign_scores_parallel.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/45_ ign_scores_parallel.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "46_mxmh_survey_results_heatmap.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/46_mxmh_survey_results_heatmap.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "47_candy_scatter.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/47_candy_scatter.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "48_candy_parallel .json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/48_candy_parallel .png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "49_coffee_sales_heatmap.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/49_coffee_sales_heatmap.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "50_supply_chain_data_parallel.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/50_supply_chain_data_parallel.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "51_Train_scatter.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/51_Train_scatter.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "52_years of economic new_line.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/52_years of economic new_line.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "53_Housing_scatter.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/53_Housing_scatter.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "54_Ecommerce_Delivery_Analytics_New_bar.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/54_Ecommerce_Delivery_Analytics_New_bar.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "55_Ecommerce_Delivery_Analytics_New_scatter.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/55_Ecommerce_Delivery_Analytics_New_scatter.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "56_Ecommerce_Delivery_Analytics_New_heatmap.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/56_Ecommerce_Delivery_Analytics_New_heatmap.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "57_health care diabetes_scatter.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/57_health care diabetes_scatter.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "58_Train_parallel.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/58_Train_parallel.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "59_health care diabetes_heatmap.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/59_health care diabetes_heatmap.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "60_Berlin_crimes_bar.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/60_Berlin_crimes_bar.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "61_Berlin_crimes_scatter.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/61_Berlin_crimes_scatter.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "62_Berlin_crimes_parallel.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/62_Berlin_crimes_parallel.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "63_Berlin_crimes_heatmap.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/63_Berlin_crimes_heatmap.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "64_US Christmas Tree Sales _heatmap.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/64_US Christmas Tree Sales _heatmap.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "65_vitamin_deficiency_disease_dataset_bar.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/65_vitamin_deficiency_disease_dataset_bar.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "66_vitamin_deficiency_disease_dataset_heatmap.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/66_vitamin_deficiency_disease_dataset_heatmap.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "67_vitamin_deficiency_disease_dataset_scatter.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/67_vitamin_deficiency_disease_dataset_scatter.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "68_supply_chain_data_parallel.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/68_supply_chain_data_parallel.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "69_top_100_linkedin_companies_2026_bar.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/69_top_100_linkedin_companies_2026_bar.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "70_one_person_ai_work_and_burnout_line.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/70_one_person_ai_work_and_burnout_line.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "71_one_person_ai_work_and_burnout_parallel.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/71_one_person_ai_work_and_burnout_parallel.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "72_StudentsPerformance_heatmap.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/72_StudentsPerformance_heatmap.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "73_StudentsPerformance_scatter.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/73_StudentsPerformance_scatter.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "74_StudentsPerformance_bar.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/74_StudentsPerformance_bar.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "75_Refined_Employment_Telecom_Services_2024_bar.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/75_Refined_Employment_Telecom_Services_2024_bar.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "76_Refined_Employment_Telecom_Services_NA_line.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/76_Refined_Employment_Telecom_Services_NA_line.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "77_gym_bar_sum.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/77_gym_bar_sum.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "78_ai_job_dataset_heatmap.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/78_ai_job_dataset_heatmap.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "79_ign_scores_bar.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/79_ign_scores_bar.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "80_gym_members_exercise_tracking_scatter.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/80_gym_members_exercise_tracking_scatter.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "81_gym_members_exercise_tracking_parallel.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/81_gym_members_exercise_tracking_parallel.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "82_Online Sales Data_line.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/82_Online Sales Data_line.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "83_global-data-on-sustainable-energy-filtered_line.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/83_global-data-on-sustainable-energy-filtered_line.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "84_starbucks_scatter.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/84_starbucks_scatter.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "85_supply_chain_data_bar.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/85_supply_chain_data_bar.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "86_starbucks_bar.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/86_starbucks_bar.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "87_museum_visitors_parallel.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/87_museum_visitors_parallel.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "88_patient_churn_dataset_heatmap.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/88_patient_churn_dataset_heatmap.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "89_Sleep_health_and_lifestyle_dataset_heatmap.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/89_Sleep_health_and_lifestyle_dataset_heatmap.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "90_Train_bar.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/90_Train_bar.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "91_supply_chain_data_scatter.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/91_supply_chain_data_scatter.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "92_sankey_b2b.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/92_sankey_b2b.png",
+    "renderer": "vega-cli (vg2png)"
+  },
+  {
+    "file": "93_sankey_financial.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/93_sankey_financial.png",
+    "renderer": "vega-cli (vg2png)"
+  },
+  {
+    "file": "94_samkey_retail.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/94_samkey_retail.png",
+    "renderer": "vega-cli (vg2png)"
+  },
+  {
+    "file": "95_sankey_supply.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/95_sankey_supply.png",
+    "renderer": "vega-cli (vg2png)"
+  },
+  {
+    "file": "96_sankey_energy.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/96_sankey_energy.png",
+    "renderer": "vega-cli (vg2png)"
+  },
+  {
+    "file": "97_sankey_hr.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/97_sankey_hr.png",
+    "renderer": "vega-cli (vg2png)"
+  },
+  {
+    "file": "98_gym_members_exercise_tracking_heatmap.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/98_gym_members_exercise_tracking_heatmap.png",
+    "renderer": "vega-cli (vl2png)"
+  },
+  {
+    "file": "99_sankey_cloud.json",
+    "success": true,
+    "out": "benchmark_annotation_system/backend/specs_initial_views/99_sankey_cloud.png",
+    "renderer": "vega-cli (vg2png)"
+  }
+]

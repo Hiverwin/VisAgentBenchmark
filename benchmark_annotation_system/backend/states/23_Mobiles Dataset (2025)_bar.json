@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Bar Chart: Battery Capacity(mAh) by Company Name",
+  "width": 600,
+  "height": 400,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Company Name",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "Battery Capacity(mAh)",
+      "type": "quantitative",
+      "aggregate": "mean",
+      "scale": {}
+    },
+    "color": {
+      "field": "Launched Year",
+      "type": "nominal",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "Company Name",
+        "type": "nominal"
+      },
+      {
+        "field": "Battery Capacity(mAh)",
+        "type": "quantitative",
+        "aggregate": "mean"
+      },
+      {
+        "field": "Launched Year",
+        "type": "nominal"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

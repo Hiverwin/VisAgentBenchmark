@@ -1,0 +1,53 @@
+{
+  "task_type": "clear_single",
+  "task_id": "08_heatmap_cs_02",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/08_heatmap_synthetic_mental_health.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_02",
+      "question": "Use find_extremes in order to know Which combination of diet quality and weather has the highest average sleep hours?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "poor - sunny",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "find_extremes",
+            "reasoning": "Use find_extremes to identify the combination of diet quality and weather with the highest average sleep hours"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "find_extremes",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "top_n": 5,
+                  "mode": "both"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "diet_quality",
+            "y": "weather",
+            "color": "sleep_hours"
+          }
+        }
+      }
+    }
+  ]
+}

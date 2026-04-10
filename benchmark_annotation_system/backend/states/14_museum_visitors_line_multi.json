@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Line Chart: Visitors over Date",
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {
+      "field": "Date",
+      "type": "temporal",
+      "scale": {}
+    },
+    "y": {
+      "field": "Visitors",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "color": {
+      "field": "Museum",
+      "type": "nominal",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "Date",
+        "type": "temporal"
+      },
+      {
+        "field": "Visitors",
+        "type": "quantitative"
+      },
+      {
+        "field": "Museum",
+        "type": "nominal"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

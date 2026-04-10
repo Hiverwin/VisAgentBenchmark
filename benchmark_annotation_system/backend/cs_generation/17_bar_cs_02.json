@@ -1,0 +1,52 @@
+{
+  "task_type": "clear_single",
+  "task_id": "17_bar_cs_02",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/17_Heart_Disease_Prediction_bar.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_02",
+      "question": "Use sort_bars in order to know Which group has higher average cholesterol - those with heart disease or without?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Presence",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "sort_bars",
+            "reasoning": "Sort bars in descending order to compare average cholesterol between heart disease presence and absence groups"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "sort_bars",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "order": "descending"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Heart Disease",
+            "y": "Cholesterol",
+            "color": "Chest pain type"
+          }
+        }
+      }
+    }
+  ]
+}

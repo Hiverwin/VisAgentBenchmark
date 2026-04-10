@@ -1,0 +1,41 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Bar Chart: Employment_Thousands by Country",
+  "width": 600,
+  "height": 400,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Country",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "Employment_Thousands",
+      "type": "quantitative",
+      "aggregate": "mean",
+      "scale": {}
+    },
+    "color": {
+      "field": "Continent",
+      "type": "nominal",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "Country",
+        "type": "nominal"
+      },
+      {
+        "field": "Employment_Thousands",
+        "type": "quantitative"
+      },
+      {
+        "field": "Continent",
+        "type": "nominal"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

@@ -1,0 +1,60 @@
+{
+  "task_type": "clear_single",
+  "task_id": "55_scatter_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/55_Ecommerce_Delivery_Analytics_New_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use zoom_2d_region with x_range from 20.0 to 40.0, y_range from 400.0 to 600.0 in order to know Use zoom_2d_region with x_range from 20 to 40, y_range from 400 to 600 to determine which Service Rating has the highest average Order Value in this region.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "2",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_2d_region",
+            "reasoning": "Zoom into the specified region and calculate average Order Value for each Service Rating"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_2d_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    20.0,
+                    40.0
+                  ],
+                  "y_range": [
+                    400.0,
+                    600.0
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Delivery Time (Minutes)",
+            "y": "Order Value (INR)",
+            "color": "Service Rating",
+            "size": "Service Rating"
+          }
+        }
+      }
+    }
+  ]
+}

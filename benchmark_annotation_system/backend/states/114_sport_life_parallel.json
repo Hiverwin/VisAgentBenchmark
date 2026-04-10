@@ -1,0 +1,550 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Parallel: Sports Footwear Sales & Consumer Behavior ",
+  "width": 600,
+  "height": 400,
+  "encoding": {
+    "x": {
+      "field": "dimension",
+      "type": "nominal",
+      "sort": [
+        "size",
+        "base_price_usd",
+        "discount_percent",
+        "final_price_usd",
+        "units_sold",
+        "revenue_usd"
+      ],
+      "axis": {
+        "title": null,
+        "labelAngle": 0
+      },
+      "scale": {}
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "size"
+          },
+          {
+            "dimension": "base_price_usd"
+          },
+          {
+            "dimension": "discount_percent"
+          },
+          {
+            "dimension": "final_price_usd"
+          },
+          {
+            "dimension": "units_sold"
+          },
+          {
+            "dimension": "revenue_usd"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#ccc"
+      },
+      "encoding": {}
+    },
+    {
+      "mark": {
+        "type": "line",
+        "opacity": 0.5,
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "normalized_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "detail": {
+          "field": "_index",
+          "type": "nominal"
+        },
+        "color": {
+          "field": "sales_channel",
+          "type": "nominal",
+          "scale": {}
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "size",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 6.0
+          },
+          {
+            "dimension": "size",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 9.0
+          },
+          {
+            "dimension": "size",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 11.0
+          },
+          {
+            "dimension": "base_price_usd",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 60.0
+          },
+          {
+            "dimension": "base_price_usd",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 141.0
+          },
+          {
+            "dimension": "base_price_usd",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 219.0
+          },
+          {
+            "dimension": "discount_percent",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0
+          },
+          {
+            "dimension": "discount_percent",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 10.0
+          },
+          {
+            "dimension": "discount_percent",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 30.0
+          },
+          {
+            "dimension": "final_price_usd",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 42.0
+          },
+          {
+            "dimension": "final_price_usd",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 121.0
+          },
+          {
+            "dimension": "final_price_usd",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 219.0
+          },
+          {
+            "dimension": "units_sold",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "units_sold",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 3.0
+          },
+          {
+            "dimension": "units_sold",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 4.0
+          },
+          {
+            "dimension": "revenue_usd",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 42.0
+          },
+          {
+            "dimension": "revenue_usd",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 270.3
+          },
+          {
+            "dimension": "revenue_usd",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 872.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'max'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "size",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 6.0
+          },
+          {
+            "dimension": "size",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 9.0
+          },
+          {
+            "dimension": "size",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 11.0
+          },
+          {
+            "dimension": "base_price_usd",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 60.0
+          },
+          {
+            "dimension": "base_price_usd",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 141.0
+          },
+          {
+            "dimension": "base_price_usd",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 219.0
+          },
+          {
+            "dimension": "discount_percent",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0
+          },
+          {
+            "dimension": "discount_percent",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 10.0
+          },
+          {
+            "dimension": "discount_percent",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 30.0
+          },
+          {
+            "dimension": "final_price_usd",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 42.0
+          },
+          {
+            "dimension": "final_price_usd",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 121.0
+          },
+          {
+            "dimension": "final_price_usd",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 219.0
+          },
+          {
+            "dimension": "units_sold",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "units_sold",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 3.0
+          },
+          {
+            "dimension": "units_sold",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 4.0
+          },
+          {
+            "dimension": "revenue_usd",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 42.0
+          },
+          {
+            "dimension": "revenue_usd",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 270.3
+          },
+          {
+            "dimension": "revenue_usd",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 872.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'mid'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "size",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 6.0
+          },
+          {
+            "dimension": "size",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 9.0
+          },
+          {
+            "dimension": "size",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 11.0
+          },
+          {
+            "dimension": "base_price_usd",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 60.0
+          },
+          {
+            "dimension": "base_price_usd",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 141.0
+          },
+          {
+            "dimension": "base_price_usd",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 219.0
+          },
+          {
+            "dimension": "discount_percent",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0
+          },
+          {
+            "dimension": "discount_percent",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 10.0
+          },
+          {
+            "dimension": "discount_percent",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 30.0
+          },
+          {
+            "dimension": "final_price_usd",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 42.0
+          },
+          {
+            "dimension": "final_price_usd",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 121.0
+          },
+          {
+            "dimension": "final_price_usd",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 219.0
+          },
+          {
+            "dimension": "units_sold",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "units_sold",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 3.0
+          },
+          {
+            "dimension": "units_sold",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 4.0
+          },
+          {
+            "dimension": "revenue_usd",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 42.0
+          },
+          {
+            "dimension": "revenue_usd",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 270.3
+          },
+          {
+            "dimension": "revenue_usd",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 872.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'min'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "axisX": {
+      "domain": false,
+      "labelAngle": 0,
+      "tickColor": "#ccc",
+      "title": null
+    },
+    "view": {
+      "stroke": null
+    },
+    "style": {
+      "label": {
+        "baseline": "middle",
+        "align": "right",
+        "dx": -5
+      },
+      "tick": {
+        "orient": "horizontal"
+      }
+    }
+  },
+  "transform": [],
+  "params": []
+}

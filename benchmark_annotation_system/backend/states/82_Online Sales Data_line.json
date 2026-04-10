@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Line Chart: Total Revenue over Date",
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {
+      "field": "Date",
+      "type": "temporal",
+      "scale": {}
+    },
+    "y": {
+      "field": "Total Revenue",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "color": {
+      "field": "Product Category",
+      "type": "nominal",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "Date",
+        "type": "temporal"
+      },
+      {
+        "field": "Total Revenue",
+        "type": "quantitative"
+      },
+      {
+        "field": "Product Category",
+        "type": "nominal"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

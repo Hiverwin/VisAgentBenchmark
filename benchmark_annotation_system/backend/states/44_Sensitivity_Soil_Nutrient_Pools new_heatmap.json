@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Heatmap: rainfall_reduction by type and grazing_treatment",
+  "width": 600,
+  "height": 400,
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "type",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "grazing_treatment",
+      "type": "nominal",
+      "scale": {}
+    },
+    "color": {
+      "aggregate": "mean",
+      "field": "rainfall_reduction",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "blues"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "type",
+        "type": "nominal"
+      },
+      {
+        "field": "grazing_treatment",
+        "type": "nominal"
+      },
+      {
+        "field": "rainfall_reduction",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

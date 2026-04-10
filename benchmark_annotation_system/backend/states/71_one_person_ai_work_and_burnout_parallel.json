@@ -1,0 +1,530 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Parallel: one_person_ai_work_and_burnout",
+  "width": 600,
+  "height": 400,
+  "encoding": {
+    "x": {
+      "field": "dimension",
+      "type": "nominal",
+      "sort": [
+        "AI_Tool_Usage_%",
+        "Hours_Coded",
+        "Code_Complexity_Score",
+        "Bugs_Introduced",
+        "Stress_Level_1_10"
+      ],
+      "axis": {
+        "title": null,
+        "labelAngle": 0
+      },
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "dimension",
+        "type": "nominal"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "AI_Tool_Usage_%"
+          },
+          {
+            "dimension": "Hours_Coded"
+          },
+          {
+            "dimension": "Code_Complexity_Score"
+          },
+          {
+            "dimension": "Bugs_Introduced"
+          },
+          {
+            "dimension": "Stress_Level_1_10"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#ccc"
+      },
+      "encoding": {}
+    },
+    {
+      "mark": {
+        "type": "line",
+        "opacity": 0.5,
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "normalized_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "detail": {
+          "field": "_index",
+          "type": "nominal"
+        },
+        "color": {
+          "field": "Burnout_Risk",
+          "type": "nominal",
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "dimension",
+            "type": "nominal"
+          },
+          {
+            "field": "normalized_value",
+            "type": "quantitative"
+          },
+          {
+            "field": "Burnout_Risk",
+            "type": "nominal"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "AI_Tool_Usage_%",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0
+          },
+          {
+            "dimension": "AI_Tool_Usage_%",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 19.4
+          },
+          {
+            "dimension": "AI_Tool_Usage_%",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 46.9
+          },
+          {
+            "dimension": "Hours_Coded",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 5.2
+          },
+          {
+            "dimension": "Hours_Coded",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 8.2
+          },
+          {
+            "dimension": "Hours_Coded",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 13.3
+          },
+          {
+            "dimension": "Code_Complexity_Score",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "Code_Complexity_Score",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 5.0
+          },
+          {
+            "dimension": "Code_Complexity_Score",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 10.0
+          },
+          {
+            "dimension": "Bugs_Introduced",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0
+          },
+          {
+            "dimension": "Bugs_Introduced",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 2.5
+          },
+          {
+            "dimension": "Bugs_Introduced",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 5.0
+          },
+          {
+            "dimension": "Stress_Level_1_10",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 4.0
+          },
+          {
+            "dimension": "Stress_Level_1_10",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 6.0
+          },
+          {
+            "dimension": "Stress_Level_1_10",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 10.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'max'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "AI_Tool_Usage_%",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0
+          },
+          {
+            "dimension": "AI_Tool_Usage_%",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 19.4
+          },
+          {
+            "dimension": "AI_Tool_Usage_%",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 46.9
+          },
+          {
+            "dimension": "Hours_Coded",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 5.2
+          },
+          {
+            "dimension": "Hours_Coded",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 8.2
+          },
+          {
+            "dimension": "Hours_Coded",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 13.3
+          },
+          {
+            "dimension": "Code_Complexity_Score",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "Code_Complexity_Score",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 5.0
+          },
+          {
+            "dimension": "Code_Complexity_Score",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 10.0
+          },
+          {
+            "dimension": "Bugs_Introduced",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0
+          },
+          {
+            "dimension": "Bugs_Introduced",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 2.5
+          },
+          {
+            "dimension": "Bugs_Introduced",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 5.0
+          },
+          {
+            "dimension": "Stress_Level_1_10",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 4.0
+          },
+          {
+            "dimension": "Stress_Level_1_10",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 6.0
+          },
+          {
+            "dimension": "Stress_Level_1_10",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 10.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'mid'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "AI_Tool_Usage_%",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0
+          },
+          {
+            "dimension": "AI_Tool_Usage_%",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 19.4
+          },
+          {
+            "dimension": "AI_Tool_Usage_%",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 46.9
+          },
+          {
+            "dimension": "Hours_Coded",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 5.2
+          },
+          {
+            "dimension": "Hours_Coded",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 8.2
+          },
+          {
+            "dimension": "Hours_Coded",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 13.3
+          },
+          {
+            "dimension": "Code_Complexity_Score",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "Code_Complexity_Score",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 5.0
+          },
+          {
+            "dimension": "Code_Complexity_Score",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 10.0
+          },
+          {
+            "dimension": "Bugs_Introduced",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0
+          },
+          {
+            "dimension": "Bugs_Introduced",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 2.5
+          },
+          {
+            "dimension": "Bugs_Introduced",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 5.0
+          },
+          {
+            "dimension": "Stress_Level_1_10",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 4.0
+          },
+          {
+            "dimension": "Stress_Level_1_10",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 6.0
+          },
+          {
+            "dimension": "Stress_Level_1_10",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 10.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'min'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "axisX": {
+      "domain": false,
+      "labelAngle": 0,
+      "tickColor": "#ccc",
+      "title": null
+    },
+    "view": {
+      "stroke": null
+    },
+    "style": {
+      "label": {
+        "baseline": "middle",
+        "align": "right",
+        "dx": -5
+      },
+      "tick": {
+        "orient": "horizontal"
+      }
+    }
+  },
+  "transform": [],
+  "params": []
+}

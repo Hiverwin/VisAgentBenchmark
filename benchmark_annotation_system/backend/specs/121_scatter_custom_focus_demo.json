@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "mark": {
+    "type": "point",
+    "filled": true,
+    "size": 120
+  },
+  "encoding": {
+    "x": {
+      "field": "x",
+      "type": "quantitative"
+    },
+    "y": {
+      "field": "y",
+      "type": "quantitative"
+    },
+    "color": {
+      "field": "group",
+      "type": "nominal"
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "x": 1,
+        "y": 2,
+        "group": "A"
+      },
+      {
+        "x": 2,
+        "y": 4,
+        "group": "A"
+      },
+      {
+        "x": 3,
+        "y": 7,
+        "group": "B"
+      },
+      {
+        "x": 4,
+        "y": 9,
+        "group": "B"
+      },
+      {
+        "x": 5,
+        "y": 8,
+        "group": "C"
+      }
+    ]
+  }
+}

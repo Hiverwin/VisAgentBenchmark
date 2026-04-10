@@ -1,0 +1,472 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Parallel: students_ai_usage",
+  "width": 600,
+  "height": 400,
+  "encoding": {
+    "x": {
+      "field": "dimension",
+      "type": "nominal",
+      "sort": [
+        "grades_before_ai",
+        "study_hours_per_day",
+        "daily_screen_time_hours",
+        "grades_after_ai"
+      ],
+      "axis": {
+        "title": null,
+        "labelAngle": 0
+      },
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "dimension",
+        "type": "nominal"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "grades_before_ai"
+          },
+          {
+            "dimension": "study_hours_per_day"
+          },
+          {
+            "dimension": "daily_screen_time_hours"
+          },
+          {
+            "dimension": "grades_after_ai"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#ccc"
+      },
+      "encoding": {}
+    },
+    {
+      "mark": {
+        "type": "line",
+        "opacity": 0.5,
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "normalized_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "detail": {
+          "field": "_index",
+          "type": "nominal"
+        },
+        "color": {
+          "field": "uses_ai",
+          "type": "nominal",
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "dimension",
+            "type": "nominal"
+          },
+          {
+            "field": "normalized_value",
+            "type": "quantitative"
+          },
+          {
+            "field": "uses_ai",
+            "type": "nominal"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "grades_before_ai",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 55.0
+          },
+          {
+            "dimension": "grades_before_ai",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 63.0
+          },
+          {
+            "dimension": "grades_before_ai",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 75.0
+          },
+          {
+            "dimension": "study_hours_per_day",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "study_hours_per_day",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 2.8
+          },
+          {
+            "dimension": "study_hours_per_day",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 5.0
+          },
+          {
+            "dimension": "daily_screen_time_hours",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 2.0
+          },
+          {
+            "dimension": "daily_screen_time_hours",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 4.0
+          },
+          {
+            "dimension": "daily_screen_time_hours",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 7.0
+          },
+          {
+            "dimension": "grades_after_ai",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 55.0
+          },
+          {
+            "dimension": "grades_after_ai",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 69.0
+          },
+          {
+            "dimension": "grades_after_ai",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 89.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'max'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "grades_before_ai",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 55.0
+          },
+          {
+            "dimension": "grades_before_ai",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 63.0
+          },
+          {
+            "dimension": "grades_before_ai",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 75.0
+          },
+          {
+            "dimension": "study_hours_per_day",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "study_hours_per_day",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 2.8
+          },
+          {
+            "dimension": "study_hours_per_day",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 5.0
+          },
+          {
+            "dimension": "daily_screen_time_hours",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 2.0
+          },
+          {
+            "dimension": "daily_screen_time_hours",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 4.0
+          },
+          {
+            "dimension": "daily_screen_time_hours",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 7.0
+          },
+          {
+            "dimension": "grades_after_ai",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 55.0
+          },
+          {
+            "dimension": "grades_after_ai",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 69.0
+          },
+          {
+            "dimension": "grades_after_ai",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 89.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'mid'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "grades_before_ai",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 55.0
+          },
+          {
+            "dimension": "grades_before_ai",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 63.0
+          },
+          {
+            "dimension": "grades_before_ai",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 75.0
+          },
+          {
+            "dimension": "study_hours_per_day",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "study_hours_per_day",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 2.8
+          },
+          {
+            "dimension": "study_hours_per_day",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 5.0
+          },
+          {
+            "dimension": "daily_screen_time_hours",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 2.0
+          },
+          {
+            "dimension": "daily_screen_time_hours",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 4.0
+          },
+          {
+            "dimension": "daily_screen_time_hours",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 7.0
+          },
+          {
+            "dimension": "grades_after_ai",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 55.0
+          },
+          {
+            "dimension": "grades_after_ai",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 69.0
+          },
+          {
+            "dimension": "grades_after_ai",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 89.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'min'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "axisX": {
+      "domain": false,
+      "labelAngle": 0,
+      "tickColor": "#ccc",
+      "title": null
+    },
+    "view": {
+      "stroke": null
+    },
+    "style": {
+      "label": {
+        "baseline": "middle",
+        "align": "right",
+        "dx": -5
+      },
+      "tick": {
+        "orient": "horizontal"
+      }
+    }
+  },
+  "transform": [],
+  "params": []
+}

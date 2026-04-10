@@ -1,0 +1,59 @@
+{
+  "task_type": "clear_single",
+  "task_id": "26_line_cs_03",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/26_China_centra_death_rate_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_03",
+      "question": "Use filter_lines with lines_to_remove equal to [Age: 0, Age: 10, Age: 25, Age: 45, Age: 65] in order to know Use filter_lines with lines_to_remove equal to Age: 0, Age: 10, Age: 25, Age: 45, Age: 65 to show only Age: 80. What is the maximum central death rate for Age: 80 group?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "233.62",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_lines",
+            "reasoning": "Filter to show only Age: 80 group, then identify the maximum central death rate"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "lines_to_remove": [
+                    "Age: 0",
+                    "Age: 10",
+                    "Age: 25",
+                    "Age: 45",
+                    "Age: 65"
+                  ],
+                  "line_field": "lines_to_remove"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Year",
+            "y": "Central death rate",
+            "color": "Age_Group"
+          }
+        }
+      }
+    }
+  ]
+}

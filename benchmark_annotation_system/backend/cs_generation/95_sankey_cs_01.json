@@ -1,0 +1,48 @@
+{
+  "task_type": "clear_single",
+  "task_id": "95_sankey_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/95_sankey_supply.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use trace_node in order to know Which node has the highest flow value in the supply chain?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Assembly Line A",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "trace_node",
+            "reasoning": "Trace Assembly Line A node to see its total flow"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Assembly Line A"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {}
+        }
+      }
+    }
+  ]
+}

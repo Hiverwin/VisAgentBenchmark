@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Heatmap: Anxiety by Instrumentalist and Composer",
+  "width": 600,
+  "height": 400,
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "Instrumentalist",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "Composer",
+      "type": "nominal",
+      "scale": {}
+    },
+    "color": {
+      "aggregate": "mean",
+      "field": "Anxiety",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "blues"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Instrumentalist",
+        "type": "nominal"
+      },
+      {
+        "field": "Composer",
+        "type": "nominal"
+      },
+      {
+        "field": "Anxiety",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

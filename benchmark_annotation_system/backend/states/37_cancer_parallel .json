@@ -1,0 +1,530 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Parallel: cancer",
+  "width": 600,
+  "height": 400,
+  "encoding": {
+    "x": {
+      "field": "dimension",
+      "type": "nominal",
+      "sort": [
+        "Radius (mean)",
+        "Texture (mean)",
+        "Area (mean)",
+        "Smoothness (mean)",
+        "Fractal dimension (mean)"
+      ],
+      "axis": {
+        "title": null,
+        "labelAngle": 0
+      },
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "dimension",
+        "type": "nominal"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Radius (mean)"
+          },
+          {
+            "dimension": "Texture (mean)"
+          },
+          {
+            "dimension": "Area (mean)"
+          },
+          {
+            "dimension": "Smoothness (mean)"
+          },
+          {
+            "dimension": "Fractal dimension (mean)"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#ccc"
+      },
+      "encoding": {}
+    },
+    {
+      "mark": {
+        "type": "line",
+        "opacity": 0.5,
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "normalized_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "detail": {
+          "field": "_index",
+          "type": "nominal"
+        },
+        "color": {
+          "field": "Diagnosis",
+          "type": "nominal",
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "dimension",
+            "type": "nominal"
+          },
+          {
+            "field": "normalized_value",
+            "type": "quantitative"
+          },
+          {
+            "field": "Diagnosis",
+            "type": "nominal"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Radius (mean)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 6.981
+          },
+          {
+            "dimension": "Radius (mean)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 13.37
+          },
+          {
+            "dimension": "Radius (mean)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 28.11
+          },
+          {
+            "dimension": "Texture (mean)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 9.71
+          },
+          {
+            "dimension": "Texture (mean)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 18.84
+          },
+          {
+            "dimension": "Texture (mean)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 39.28
+          },
+          {
+            "dimension": "Area (mean)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 143.5
+          },
+          {
+            "dimension": "Area (mean)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 551.1
+          },
+          {
+            "dimension": "Area (mean)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 2501.0
+          },
+          {
+            "dimension": "Smoothness (mean)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0526299999999999
+          },
+          {
+            "dimension": "Smoothness (mean)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 0.09587
+          },
+          {
+            "dimension": "Smoothness (mean)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 0.1634
+          },
+          {
+            "dimension": "Fractal dimension (mean)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.04996
+          },
+          {
+            "dimension": "Fractal dimension (mean)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 0.06154
+          },
+          {
+            "dimension": "Fractal dimension (mean)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 0.09744
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'max'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Radius (mean)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 6.981
+          },
+          {
+            "dimension": "Radius (mean)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 13.37
+          },
+          {
+            "dimension": "Radius (mean)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 28.11
+          },
+          {
+            "dimension": "Texture (mean)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 9.71
+          },
+          {
+            "dimension": "Texture (mean)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 18.84
+          },
+          {
+            "dimension": "Texture (mean)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 39.28
+          },
+          {
+            "dimension": "Area (mean)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 143.5
+          },
+          {
+            "dimension": "Area (mean)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 551.1
+          },
+          {
+            "dimension": "Area (mean)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 2501.0
+          },
+          {
+            "dimension": "Smoothness (mean)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0526299999999999
+          },
+          {
+            "dimension": "Smoothness (mean)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 0.09587
+          },
+          {
+            "dimension": "Smoothness (mean)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 0.1634
+          },
+          {
+            "dimension": "Fractal dimension (mean)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.04996
+          },
+          {
+            "dimension": "Fractal dimension (mean)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 0.06154
+          },
+          {
+            "dimension": "Fractal dimension (mean)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 0.09744
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'mid'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Radius (mean)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 6.981
+          },
+          {
+            "dimension": "Radius (mean)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 13.37
+          },
+          {
+            "dimension": "Radius (mean)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 28.11
+          },
+          {
+            "dimension": "Texture (mean)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 9.71
+          },
+          {
+            "dimension": "Texture (mean)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 18.84
+          },
+          {
+            "dimension": "Texture (mean)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 39.28
+          },
+          {
+            "dimension": "Area (mean)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 143.5
+          },
+          {
+            "dimension": "Area (mean)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 551.1
+          },
+          {
+            "dimension": "Area (mean)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 2501.0
+          },
+          {
+            "dimension": "Smoothness (mean)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0526299999999999
+          },
+          {
+            "dimension": "Smoothness (mean)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 0.09587
+          },
+          {
+            "dimension": "Smoothness (mean)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 0.1634
+          },
+          {
+            "dimension": "Fractal dimension (mean)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.04996
+          },
+          {
+            "dimension": "Fractal dimension (mean)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 0.06154
+          },
+          {
+            "dimension": "Fractal dimension (mean)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 0.09744
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'min'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "axisX": {
+      "domain": false,
+      "labelAngle": 0,
+      "tickColor": "#ccc",
+      "title": null
+    },
+    "view": {
+      "stroke": null
+    },
+    "style": {
+      "label": {
+        "baseline": "middle",
+        "align": "right",
+        "dx": -5
+      },
+      "tick": {
+        "orient": "horizontal"
+      }
+    }
+  },
+  "transform": [],
+  "params": []
+}

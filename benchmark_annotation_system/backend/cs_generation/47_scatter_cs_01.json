@@ -1,0 +1,59 @@
+{
+  "task_type": "clear_single",
+  "task_id": "47_scatter_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/47_candy_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use zoom_2d_region with x_range from 0.5 to 1.0, y_range from 60.0 to 85.0 in order to know Use zoom_2d_region with x_range from 0.5 to 1.0, y_range from 60.0 to 85.0 to determine which chocolate category has more data points in this region.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Yes",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_2d_region",
+            "reasoning": "Zoom into the specified region to count data points by chocolate category"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_2d_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    0.5,
+                    1.0
+                  ],
+                  "y_range": [
+                    60.0,
+                    85.0
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "sugarpercent",
+            "y": "winpercent",
+            "color": "chocolate"
+          }
+        }
+      }
+    }
+  ]
+}

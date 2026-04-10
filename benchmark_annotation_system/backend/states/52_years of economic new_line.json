@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Line Chart: Access to electricity (% of population) over Year",
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "y": {
+      "field": "Access to electricity (% of population)",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "color": {
+      "field": "Entity",
+      "type": "nominal",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "Year",
+        "type": "quantitative"
+      },
+      {
+        "field": "Access to electricity (% of population)",
+        "type": "quantitative"
+      },
+      {
+        "field": "Entity",
+        "type": "nominal"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

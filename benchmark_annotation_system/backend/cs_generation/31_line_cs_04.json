@@ -1,0 +1,52 @@
+{
+  "task_type": "clear_single",
+  "task_id": "31_line_cs_04",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/31_TSLA_Stock_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_04",
+      "question": "Use zoom_x_region in order to know Use zoom_x_region with start equal to 2021-11-01, end equal to 2021-11-06 to focus on early November 2021. What is the highest closing price in this period?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "409.97",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_x_region",
+            "reasoning": "Zoom into early November 2021 region to identify the highest closing price in that period"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_x_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2021-11-01",
+                  "end": "2021-11-06"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Date",
+            "y": "Close"
+          }
+        }
+      }
+    }
+  ]
+}

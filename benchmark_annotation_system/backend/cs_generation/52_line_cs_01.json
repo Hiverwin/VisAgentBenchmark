@@ -1,0 +1,53 @@
+{
+  "task_type": "clear_single",
+  "task_id": "52_line_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/52_years of economic new_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use zoom_x_region in order to know Use zoom_x_region with start equal to 2010, end equal to 2020 to determine the maximum Access to electricity percentage for Afghanistan in this period.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "97.7%",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_x_region",
+            "reasoning": "Zoom into the 2010-2020 period and identify the maximum electricity access value"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_x_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2010",
+                  "end": "2020"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Year",
+            "y": "Access to electricity (% of population)",
+            "color": "Entity"
+          }
+        }
+      }
+    }
+  ]
+}

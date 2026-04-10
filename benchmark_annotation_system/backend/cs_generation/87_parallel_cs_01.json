@@ -1,0 +1,52 @@
+{
+  "task_type": "clear_single",
+  "task_id": "87_parallel_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/87_museum_visitors_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use highlight_category in order to know Which museum has the highest average visitor count?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Avila Adobe",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_category",
+            "reasoning": "Highlight Avila Adobe to see its visitor pattern and confirm it has the highest values"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "field,values",
+                  "values": [
+                    "dimension",
+                    "Avila Adobe"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {}
+        }
+      }
+    }
+  ]
+}

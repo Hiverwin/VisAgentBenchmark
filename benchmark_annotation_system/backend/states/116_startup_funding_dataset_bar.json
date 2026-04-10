@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Bar Chart: Startup Funding Dataset : Number of Employees by Country",
+  "width": 600,
+  "height": 400,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Country",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "Amount Raised (USD)",
+      "type": "quantitative",
+      "aggregate": "mean",
+      "scale": {}
+    },
+    "color": {
+      "field": "Industry",
+      "type": "nominal",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "Country",
+        "type": "nominal"
+      },
+      {
+        "field": "Amount Raised (USD)",
+        "type": "quantitative",
+        "aggregate": "mean"
+      },
+      {
+        "field": "Industry",
+        "type": "nominal"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

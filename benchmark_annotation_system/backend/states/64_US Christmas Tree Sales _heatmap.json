@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Heatmap: Average Tree Price by Year and Type of tree",
+  "width": 600,
+  "height": 400,
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "Type of tree",
+      "type": "nominal",
+      "scale": {}
+    },
+    "color": {
+      "aggregate": "mean",
+      "field": "Average Tree Price",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "blues"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Year",
+        "type": "nominal"
+      },
+      {
+        "field": "Type of tree",
+        "type": "nominal"
+      },
+      {
+        "field": "Average Tree Price",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

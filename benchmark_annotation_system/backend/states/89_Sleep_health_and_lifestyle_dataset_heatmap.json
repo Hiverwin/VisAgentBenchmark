@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Heatmap: Sleep Duration by Stress Level and BMI Category",
+  "width": 600,
+  "height": 400,
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "Stress Level",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "BMI Category",
+      "type": "nominal",
+      "scale": {}
+    },
+    "color": {
+      "aggregate": "mean",
+      "field": "Sleep Duration",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "blues"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Stress Level",
+        "type": "nominal"
+      },
+      {
+        "field": "BMI Category",
+        "type": "nominal"
+      },
+      {
+        "field": "Sleep Duration",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

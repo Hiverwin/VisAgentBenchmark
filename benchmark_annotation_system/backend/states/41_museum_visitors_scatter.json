@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Chinese American Museum or America Tropical Interpretive Center ？",
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "point",
+    "filled": true,
+    "opacity": 0.7
+  },
+  "encoding": {
+    "x": {
+      "field": "Chinese American Museum",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "y": {
+      "field": "America Tropical Interpretive Center",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "Chinese American Museum",
+        "type": "quantitative"
+      },
+      {
+        "field": "America Tropical Interpretive Center",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

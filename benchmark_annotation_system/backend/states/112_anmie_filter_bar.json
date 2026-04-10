@@ -1,0 +1,22 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Bar Chart: popularity by title",
+  "width": 600,
+  "height": 400,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "title",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "popularity",
+      "type": "quantitative",
+      "aggregate": "mean",
+      "scale": {}
+    }
+  },
+  "transform": [],
+  "params": []
+}

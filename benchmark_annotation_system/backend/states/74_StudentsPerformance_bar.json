@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Bar Chart: math score by race/ethnicity",
+  "width": 600,
+  "height": 400,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "race/ethnicity",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "math score",
+      "type": "quantitative",
+      "aggregate": "mean",
+      "scale": {}
+    },
+    "color": {
+      "field": "parental level of education",
+      "type": "nominal",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "race/ethnicity",
+        "type": "nominal"
+      },
+      {
+        "field": "math score",
+        "type": "quantitative",
+        "aggregate": "mean"
+      },
+      {
+        "field": "parental level of education",
+        "type": "nominal"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

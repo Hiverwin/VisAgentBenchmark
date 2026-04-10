@@ -1,0 +1,53 @@
+{
+  "task_type": "clear_single",
+  "task_id": "19_scatter_cs_03",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/19_Heart_Disease_Prediction_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_03",
+      "question": "Use calculate_correlation in order to know What is the correlation between age and cholesterol level?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "0.22",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "calculate_correlation",
+            "reasoning": "Use calculate_correlation with pearson method to compute the correlation between age and cholesterol"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "pearson"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Age",
+            "y": "Cholesterol",
+            "color": "Heart Disease",
+            "size": "Chest pain type"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "task_type": "clear_single",
+  "task_id": "54_bar_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/54_Ecommerce_Delivery_Analytics_New_bar.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use sort_bars in order to know Use sort_bars with order equal to descending to rank platforms by average Delivery Time and return the platform positioned first.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "JioMart",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "sort_bars",
+            "reasoning": "Sort bars in descending order to identify platform with highest average Delivery Time"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "sort_bars",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "order": "descending"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Platform",
+            "y": "Delivery Time (Minutes)",
+            "color": "Service Rating"
+          }
+        }
+      }
+    }
+  ]
+}

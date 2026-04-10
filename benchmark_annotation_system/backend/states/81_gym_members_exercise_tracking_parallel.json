@@ -1,0 +1,530 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Parallel: gym_members_exercise_tracking",
+  "width": 600,
+  "height": 400,
+  "encoding": {
+    "x": {
+      "field": "dimension",
+      "type": "nominal",
+      "sort": [
+        "Weight (kg)",
+        "Height (m)",
+        "Avg_BPM",
+        "Calories_Burned",
+        "Session_Duration (hours)"
+      ],
+      "axis": {
+        "title": null,
+        "labelAngle": 0
+      },
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "dimension",
+        "type": "nominal"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Weight (kg)"
+          },
+          {
+            "dimension": "Height (m)"
+          },
+          {
+            "dimension": "Avg_BPM"
+          },
+          {
+            "dimension": "Calories_Burned"
+          },
+          {
+            "dimension": "Session_Duration (hours)"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#ccc"
+      },
+      "encoding": {}
+    },
+    {
+      "mark": {
+        "type": "line",
+        "opacity": 0.5,
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "normalized_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "detail": {
+          "field": "_index",
+          "type": "nominal"
+        },
+        "color": {
+          "field": "Workout_Type",
+          "type": "nominal",
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "dimension",
+            "type": "nominal"
+          },
+          {
+            "field": "normalized_value",
+            "type": "quantitative"
+          },
+          {
+            "field": "Workout_Type",
+            "type": "nominal"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Weight (kg)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 40.0
+          },
+          {
+            "dimension": "Weight (kg)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 70.0
+          },
+          {
+            "dimension": "Weight (kg)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 129.9
+          },
+          {
+            "dimension": "Height (m)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.5
+          },
+          {
+            "dimension": "Height (m)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 1.71
+          },
+          {
+            "dimension": "Height (m)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 2.0
+          },
+          {
+            "dimension": "Avg_BPM",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 120.0
+          },
+          {
+            "dimension": "Avg_BPM",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 143.0
+          },
+          {
+            "dimension": "Avg_BPM",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 169.0
+          },
+          {
+            "dimension": "Calories_Burned",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 303.0
+          },
+          {
+            "dimension": "Calories_Burned",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 893.0
+          },
+          {
+            "dimension": "Calories_Burned",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 1783.0
+          },
+          {
+            "dimension": "Session_Duration (hours)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.5
+          },
+          {
+            "dimension": "Session_Duration (hours)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 1.26
+          },
+          {
+            "dimension": "Session_Duration (hours)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 2.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'max'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Weight (kg)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 40.0
+          },
+          {
+            "dimension": "Weight (kg)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 70.0
+          },
+          {
+            "dimension": "Weight (kg)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 129.9
+          },
+          {
+            "dimension": "Height (m)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.5
+          },
+          {
+            "dimension": "Height (m)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 1.71
+          },
+          {
+            "dimension": "Height (m)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 2.0
+          },
+          {
+            "dimension": "Avg_BPM",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 120.0
+          },
+          {
+            "dimension": "Avg_BPM",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 143.0
+          },
+          {
+            "dimension": "Avg_BPM",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 169.0
+          },
+          {
+            "dimension": "Calories_Burned",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 303.0
+          },
+          {
+            "dimension": "Calories_Burned",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 893.0
+          },
+          {
+            "dimension": "Calories_Burned",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 1783.0
+          },
+          {
+            "dimension": "Session_Duration (hours)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.5
+          },
+          {
+            "dimension": "Session_Duration (hours)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 1.26
+          },
+          {
+            "dimension": "Session_Duration (hours)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 2.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'mid'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Weight (kg)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 40.0
+          },
+          {
+            "dimension": "Weight (kg)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 70.0
+          },
+          {
+            "dimension": "Weight (kg)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 129.9
+          },
+          {
+            "dimension": "Height (m)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.5
+          },
+          {
+            "dimension": "Height (m)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 1.71
+          },
+          {
+            "dimension": "Height (m)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 2.0
+          },
+          {
+            "dimension": "Avg_BPM",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 120.0
+          },
+          {
+            "dimension": "Avg_BPM",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 143.0
+          },
+          {
+            "dimension": "Avg_BPM",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 169.0
+          },
+          {
+            "dimension": "Calories_Burned",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 303.0
+          },
+          {
+            "dimension": "Calories_Burned",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 893.0
+          },
+          {
+            "dimension": "Calories_Burned",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 1783.0
+          },
+          {
+            "dimension": "Session_Duration (hours)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.5
+          },
+          {
+            "dimension": "Session_Duration (hours)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 1.26
+          },
+          {
+            "dimension": "Session_Duration (hours)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 2.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'min'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "axisX": {
+      "domain": false,
+      "labelAngle": 0,
+      "tickColor": "#ccc",
+      "title": null
+    },
+    "view": {
+      "stroke": null
+    },
+    "style": {
+      "label": {
+        "baseline": "middle",
+        "align": "right",
+        "dx": -5
+      },
+      "tick": {
+        "orient": "horizontal"
+      }
+    }
+  },
+  "transform": [],
+  "params": []
+}

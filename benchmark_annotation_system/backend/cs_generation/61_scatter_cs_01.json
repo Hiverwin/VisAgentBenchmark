@@ -1,0 +1,52 @@
+{
+  "task_type": "clear_single",
+  "task_id": "61_scatter_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/61_Berlin_crimes_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use calculate_correlation in order to know Use calculate_correlation with method equal to pearson to compute the correlation between robbery and injury cases in Berlin.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "0.8448",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "calculate_correlation",
+            "reasoning": "Calculate the Pearson correlation coefficient between robbery and injury cases to understand their relationship"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "pearson"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Robbery",
+            "y": "Injury",
+            "color": "District"
+          }
+        }
+      }
+    }
+  ]
+}

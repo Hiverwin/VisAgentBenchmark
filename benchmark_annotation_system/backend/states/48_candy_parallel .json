@@ -1,0 +1,414 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Parallel: candy",
+  "width": 600,
+  "height": 400,
+  "encoding": {
+    "x": {
+      "field": "dimension",
+      "type": "nominal",
+      "sort": [
+        "sugarpercent",
+        "pricepercent",
+        "winpercent"
+      ],
+      "axis": {
+        "title": null,
+        "labelAngle": 0
+      },
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "dimension",
+        "type": "nominal"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "sugarpercent"
+          },
+          {
+            "dimension": "pricepercent"
+          },
+          {
+            "dimension": "winpercent"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#ccc"
+      },
+      "encoding": {}
+    },
+    {
+      "mark": {
+        "type": "line",
+        "opacity": 0.5,
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "normalized_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "detail": {
+          "field": "_index",
+          "type": "nominal"
+        },
+        "color": {
+          "field": "chocolate",
+          "type": "nominal",
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "dimension",
+            "type": "nominal"
+          },
+          {
+            "field": "normalized_value",
+            "type": "quantitative"
+          },
+          {
+            "field": "chocolate",
+            "type": "nominal"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "sugarpercent",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.034000002
+          },
+          {
+            "dimension": "sugarpercent",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 0.465
+          },
+          {
+            "dimension": "sugarpercent",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 0.98799998
+          },
+          {
+            "dimension": "pricepercent",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.011
+          },
+          {
+            "dimension": "pricepercent",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 0.465
+          },
+          {
+            "dimension": "pricepercent",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 0.97600001
+          },
+          {
+            "dimension": "winpercent",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 22.445341
+          },
+          {
+            "dimension": "winpercent",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 48.982651
+          },
+          {
+            "dimension": "winpercent",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 84.18029
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'max'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "sugarpercent",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.034000002
+          },
+          {
+            "dimension": "sugarpercent",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 0.465
+          },
+          {
+            "dimension": "sugarpercent",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 0.98799998
+          },
+          {
+            "dimension": "pricepercent",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.011
+          },
+          {
+            "dimension": "pricepercent",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 0.465
+          },
+          {
+            "dimension": "pricepercent",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 0.97600001
+          },
+          {
+            "dimension": "winpercent",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 22.445341
+          },
+          {
+            "dimension": "winpercent",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 48.982651
+          },
+          {
+            "dimension": "winpercent",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 84.18029
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'mid'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "sugarpercent",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.034000002
+          },
+          {
+            "dimension": "sugarpercent",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 0.465
+          },
+          {
+            "dimension": "sugarpercent",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 0.98799998
+          },
+          {
+            "dimension": "pricepercent",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.011
+          },
+          {
+            "dimension": "pricepercent",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 0.465
+          },
+          {
+            "dimension": "pricepercent",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 0.97600001
+          },
+          {
+            "dimension": "winpercent",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 22.445341
+          },
+          {
+            "dimension": "winpercent",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 48.982651
+          },
+          {
+            "dimension": "winpercent",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 84.18029
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'min'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "axisX": {
+      "domain": false,
+      "labelAngle": 0,
+      "tickColor": "#ccc",
+      "title": null
+    },
+    "view": {
+      "stroke": null
+    },
+    "style": {
+      "label": {
+        "baseline": "middle",
+        "align": "right",
+        "dx": -5
+      },
+      "tick": {
+        "orient": "horizontal"
+      }
+    }
+  },
+  "transform": [],
+  "params": []
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Scatter Plot: Delivery Time (Minutes) vs Order Value (INR)",
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "point",
+    "filled": true,
+    "opacity": 0.7
+  },
+  "encoding": {
+    "x": {
+      "field": "Delivery Time (Minutes)",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "y": {
+      "field": "Order Value (INR)",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "color": {
+      "field": "Service Rating",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "size": {
+      "field": "Service Rating",
+      "type": "quantitative"
+    },
+    "tooltip": [
+      {
+        "field": "Delivery Time (Minutes)",
+        "type": "quantitative"
+      },
+      {
+        "field": "Order Value (INR)",
+        "type": "quantitative"
+      },
+      {
+        "field": "Service Rating",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

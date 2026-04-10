@@ -1,0 +1,88 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Heatmap: mean final_price_usd by brand and sales_channel (sport footwear)",
+  "width": 600,
+  "height": 400,
+  "data": {
+    "values": [
+      {
+        "brand": "ASICS",
+        "sales_channel": "Online",
+        "final_price_usd": 122.9088693957113
+      },
+      {
+        "brand": "Adidas",
+        "sales_channel": "Retail Store",
+        "final_price_usd": 121.9167658730159
+      },
+      {
+        "brand": "Puma",
+        "sales_channel": "Online",
+        "final_price_usd": 123.2777999999999
+      },
+      {
+        "brand": "Reebok",
+        "sales_channel": "Online",
+        "final_price_usd": 121.8592132505176
+      },
+      {
+        "brand": "Nike",
+        "sales_channel": "Online",
+        "final_price_usd": 121.797972972973
+      },
+      {
+        "brand": "ASICS",
+        "sales_channel": "Retail Store",
+        "final_price_usd": 123.04721706864561
+      },
+      {
+        "brand": "New Balance",
+        "sales_channel": "Retail Store",
+        "final_price_usd": 123.94980039920162
+      },
+      {
+        "brand": "Reebok",
+        "sales_channel": "Retail Store",
+        "final_price_usd": 120.35992141453816
+      },
+      {
+        "brand": "Adidas",
+        "sales_channel": "Online",
+        "final_price_usd": 120.72495049504947
+      },
+      {
+        "brand": "New Balance",
+        "sales_channel": "Online",
+        "final_price_usd": 119.90687500000013
+      },
+      {
+        "brand": "Puma",
+        "sales_channel": "Retail Store",
+        "final_price_usd": 122.278585086042
+      },
+      {
+        "brand": "Nike",
+        "sales_channel": "Retail Store",
+        "final_price_usd": 120.84999999999995
+      }
+    ]
+  },
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "brand",
+      "type": "nominal"
+    },
+    "y": {
+      "field": "sales_channel",
+      "type": "nominal"
+    },
+    "color": {
+      "field": "final_price_usd",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "blues"
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Bar Chart: Delivery Time (Minutes) by Platform",
+  "width": 600,
+  "height": 400,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Platform",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "Delivery Time (Minutes)",
+      "type": "quantitative",
+      "aggregate": "mean",
+      "scale": {}
+    },
+    "color": {
+      "field": "Service Rating",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "Platform",
+        "type": "nominal"
+      },
+      {
+        "field": "Delivery Time (Minutes)",
+        "type": "quantitative",
+        "aggregate": "mean"
+      },
+      {
+        "field": "Service Rating",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

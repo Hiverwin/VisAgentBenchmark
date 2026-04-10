@@ -1,0 +1,183 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Heatmap: Mean Sleep Duration by Stress Level and BMI Category",
+  "width": 600,
+  "height": 400,
+  "data": {
+    "values": [
+      {
+        "Stress Level": 3,
+        "BMI Category": "Normal",
+        "Sleep Duration": 8.371,
+        "Record Count": 34
+      },
+      {
+        "Stress Level": 3,
+        "BMI Category": "Normal Weight",
+        "Sleep Duration": 8.1,
+        "Record Count": 4
+      },
+      {
+        "Stress Level": 3,
+        "BMI Category": "Overweight",
+        "Sleep Duration": 8.094,
+        "Record Count": 31
+      },
+      {
+        "Stress Level": 3,
+        "BMI Category": "Obese",
+        "Sleep Duration": 8.1,
+        "Record Count": 2
+      },
+      {
+        "Stress Level": 4,
+        "BMI Category": "Normal",
+        "Sleep Duration": 7.179,
+        "Record Count": 38
+      },
+      {
+        "Stress Level": 4,
+        "BMI Category": "Normal Weight",
+        "Sleep Duration": 7.75,
+        "Record Count": 4
+      },
+      {
+        "Stress Level": 4,
+        "BMI Category": "Overweight",
+        "Sleep Duration": 6.725,
+        "Record Count": 28
+      },
+      {
+        "Stress Level": 5,
+        "BMI Category": "Normal",
+        "Sleep Duration": 7.529,
+        "Record Count": 58
+      },
+      {
+        "Stress Level": 5,
+        "BMI Category": "Normal Weight",
+        "Sleep Duration": 7.5,
+        "Record Count": 2
+      },
+      {
+        "Stress Level": 5,
+        "BMI Category": "Overweight",
+        "Sleep Duration": 6.767,
+        "Record Count": 3
+      },
+      {
+        "Stress Level": 5,
+        "BMI Category": "Obese",
+        "Sleep Duration": 7.35,
+        "Record Count": 4
+      },
+      {
+        "Stress Level": 6,
+        "BMI Category": "Normal",
+        "Sleep Duration": 7.737,
+        "Record Count": 32
+      },
+      {
+        "Stress Level": 6,
+        "BMI Category": "Normal Weight",
+        "Sleep Duration": 7.15,
+        "Record Count": 6
+      },
+      {
+        "Stress Level": 6,
+        "BMI Category": "Overweight",
+        "Sleep Duration": 6.55,
+        "Record Count": 8
+      },
+      {
+        "Stress Level": 7,
+        "BMI Category": "Normal Weight",
+        "Sleep Duration": 6.54,
+        "Record Count": 5
+      },
+      {
+        "Stress Level": 7,
+        "BMI Category": "Overweight",
+        "Sleep Duration": 6.464,
+        "Record Count": 44
+      },
+      {
+        "Stress Level": 7,
+        "BMI Category": "Obese",
+        "Sleep Duration": 6.3,
+        "Record Count": 1
+      },
+      {
+        "Stress Level": 8,
+        "BMI Category": "Normal",
+        "Sleep Duration": 6.064,
+        "Record Count": 33
+      },
+      {
+        "Stress Level": 8,
+        "BMI Category": "Overweight",
+        "Sleep Duration": 6.05,
+        "Record Count": 34
+      },
+      {
+        "Stress Level": 8,
+        "BMI Category": "Obese",
+        "Sleep Duration": 5.9,
+        "Record Count": 3
+      }
+    ]
+  },
+  "mark": {
+    "type": "rect",
+    "stroke": "white",
+    "strokeWidth": 1
+  },
+  "encoding": {
+    "x": {
+      "field": "Stress Level",
+      "type": "ordinal",
+      "sort": "ascending",
+      "title": "Stress Level"
+    },
+    "y": {
+      "field": "BMI Category",
+      "type": "nominal",
+      "sort": [
+        "Normal",
+        "Normal Weight",
+        "Overweight",
+        "Obese"
+      ],
+      "title": "BMI Category"
+    },
+    "color": {
+      "field": "Sleep Duration",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "blues"
+      },
+      "title": "Mean Sleep Duration (hours)"
+    },
+    "tooltip": [
+      {
+        "field": "Stress Level",
+        "type": "ordinal"
+      },
+      {
+        "field": "BMI Category",
+        "type": "nominal"
+      },
+      {
+        "field": "Sleep Duration",
+        "type": "quantitative",
+        "title": "Mean Sleep Duration"
+      },
+      {
+        "field": "Record Count",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

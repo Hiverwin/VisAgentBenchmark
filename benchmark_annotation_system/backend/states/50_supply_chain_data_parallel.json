@@ -1,0 +1,472 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Parallel: supply_chain_data",
+  "width": 600,
+  "height": 400,
+  "encoding": {
+    "x": {
+      "field": "dimension",
+      "type": "nominal",
+      "sort": [
+        "Manufacturing lead time",
+        "Manufacturing costs",
+        "Production volumes",
+        "Defect rates"
+      ],
+      "axis": {
+        "title": null,
+        "labelAngle": 0
+      },
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "dimension",
+        "type": "nominal"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Manufacturing lead time"
+          },
+          {
+            "dimension": "Manufacturing costs"
+          },
+          {
+            "dimension": "Production volumes"
+          },
+          {
+            "dimension": "Defect rates"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#ccc"
+      },
+      "encoding": {}
+    },
+    {
+      "mark": {
+        "type": "line",
+        "opacity": 0.5,
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "normalized_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "detail": {
+          "field": "_index",
+          "type": "nominal"
+        },
+        "color": {
+          "field": "Product type",
+          "type": "nominal",
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "dimension",
+            "type": "nominal"
+          },
+          {
+            "field": "normalized_value",
+            "type": "quantitative"
+          },
+          {
+            "field": "Product type",
+            "type": "nominal"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Manufacturing lead time",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "Manufacturing lead time",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 14.0
+          },
+          {
+            "dimension": "Manufacturing lead time",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 30.0
+          },
+          {
+            "dimension": "Manufacturing costs",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0850685695870688
+          },
+          {
+            "dimension": "Manufacturing costs",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 45.90562173883524
+          },
+          {
+            "dimension": "Manufacturing costs",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 99.46610860359912
+          },
+          {
+            "dimension": "Production volumes",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 104.0
+          },
+          {
+            "dimension": "Production volumes",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 568.5
+          },
+          {
+            "dimension": "Production volumes",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 985.0
+          },
+          {
+            "dimension": "Defect rates",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0186075676310149
+          },
+          {
+            "dimension": "Defect rates",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 2.141862683349868
+          },
+          {
+            "dimension": "Defect rates",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 4.939255288620948
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'max'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Manufacturing lead time",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "Manufacturing lead time",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 14.0
+          },
+          {
+            "dimension": "Manufacturing lead time",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 30.0
+          },
+          {
+            "dimension": "Manufacturing costs",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0850685695870688
+          },
+          {
+            "dimension": "Manufacturing costs",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 45.90562173883524
+          },
+          {
+            "dimension": "Manufacturing costs",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 99.46610860359912
+          },
+          {
+            "dimension": "Production volumes",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 104.0
+          },
+          {
+            "dimension": "Production volumes",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 568.5
+          },
+          {
+            "dimension": "Production volumes",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 985.0
+          },
+          {
+            "dimension": "Defect rates",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0186075676310149
+          },
+          {
+            "dimension": "Defect rates",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 2.141862683349868
+          },
+          {
+            "dimension": "Defect rates",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 4.939255288620948
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'mid'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Manufacturing lead time",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "Manufacturing lead time",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 14.0
+          },
+          {
+            "dimension": "Manufacturing lead time",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 30.0
+          },
+          {
+            "dimension": "Manufacturing costs",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0850685695870688
+          },
+          {
+            "dimension": "Manufacturing costs",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 45.90562173883524
+          },
+          {
+            "dimension": "Manufacturing costs",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 99.46610860359912
+          },
+          {
+            "dimension": "Production volumes",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 104.0
+          },
+          {
+            "dimension": "Production volumes",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 568.5
+          },
+          {
+            "dimension": "Production volumes",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 985.0
+          },
+          {
+            "dimension": "Defect rates",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0186075676310149
+          },
+          {
+            "dimension": "Defect rates",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 2.141862683349868
+          },
+          {
+            "dimension": "Defect rates",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 4.939255288620948
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'min'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "axisX": {
+      "domain": false,
+      "labelAngle": 0,
+      "tickColor": "#ccc",
+      "title": null
+    },
+    "view": {
+      "stroke": null
+    },
+    "style": {
+      "label": {
+        "baseline": "middle",
+        "align": "right",
+        "dx": -5
+      },
+      "tick": {
+        "orient": "horizontal"
+      }
+    }
+  },
+  "transform": [],
+  "params": []
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Scatter Plot: sqft_living vs price",
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "point",
+    "filled": true,
+    "opacity": 0.7
+  },
+  "encoding": {
+    "x": {
+      "field": "sqft_living",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "y": {
+      "field": "price",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "color": {
+      "field": "floors",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "size": {
+      "field": "bedrooms",
+      "type": "quantitative"
+    },
+    "tooltip": [
+      {
+        "field": "sqft_living",
+        "type": "quantitative"
+      },
+      {
+        "field": "price",
+        "type": "quantitative"
+      },
+      {
+        "field": "floors",
+        "type": "quantitative"
+      },
+      {
+        "field": "bedrooms",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Scatter Plot: Price vs Revenue generated",
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "point",
+    "filled": true,
+    "opacity": 0.7
+  },
+  "encoding": {
+    "x": {
+      "field": "Price",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "y": {
+      "field": "Revenue generated",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "color": {
+      "field": "Product type",
+      "type": "nominal",
+      "scale": {}
+    }
+  },
+  "transform": [],
+  "params": []
+}

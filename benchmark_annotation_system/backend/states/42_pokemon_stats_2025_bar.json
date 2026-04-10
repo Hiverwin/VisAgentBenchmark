@@ -1,0 +1,32 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Bar Chart: speed by type_1",
+  "width": 600,
+  "height": 400,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "type_1",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "speed",
+      "type": "quantitative",
+      "aggregate": "mean",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "type_1",
+        "type": "nominal"
+      },
+      {
+        "field": "speed",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

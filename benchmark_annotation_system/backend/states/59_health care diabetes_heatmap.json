@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Heatmap: BloodPressure by Pregnancies and Outcome",
+  "width": 600,
+  "height": 400,
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "Pregnancies",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "Outcome",
+      "type": "nominal",
+      "scale": {}
+    },
+    "color": {
+      "aggregate": "mean",
+      "field": "BloodPressure",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "blues"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Pregnancies",
+        "type": "nominal"
+      },
+      {
+        "field": "Outcome",
+        "type": "nominal"
+      },
+      {
+        "field": "BloodPressure",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

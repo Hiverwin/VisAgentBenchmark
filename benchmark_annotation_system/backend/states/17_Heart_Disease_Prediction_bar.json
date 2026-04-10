@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Bar Chart: Cholesterol by Heart Disease",
+  "width": 600,
+  "height": 400,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Heart Disease",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "Cholesterol",
+      "type": "quantitative",
+      "aggregate": "mean",
+      "scale": {}
+    },
+    "color": {
+      "field": "Chest pain type",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "Heart Disease",
+        "type": "nominal"
+      },
+      {
+        "field": "Cholesterol",
+        "type": "quantitative",
+        "aggregate": "mean"
+      },
+      {
+        "field": "Chest pain type",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

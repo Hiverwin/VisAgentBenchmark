@@ -1,0 +1,46 @@
+# Intent Classification
+
+## Task Definition
+Classify user queries into one of three intent categories based on analytical specificity.
+
+## Intent Categories
+
+CHITCHAT
+- Greetings, acknowledgments, farewells
+- System capability inquiries
+- Off-topic or non-analytical discussion
+- Indicators: hello, hi, thanks, bye, what can you do, how to use
+
+EXPLICIT_ANALYSIS
+- Queries with concrete analytical targets
+- Contains specific operations, parameters, or transformations
+- Indicators: action verbs (filter, zoom, highlight, sort, show, compare), explicit ranges, named attributes, specific categories
+- User knows what outcome they want
+
+VAGUE_EXPLORATION
+- Data-related but lacking specific targets
+- Open-ended pattern discovery requests
+- Indicators: what patterns, anything interesting, analyze this, explore, what do you see
+- User wants system to discover insights autonomously
+
+## Classification Procedure
+
+1. Check for conversational markers. If present, return CHITCHAT.
+2. Check for action verbs with specific parameters. If present, return EXPLICIT_ANALYSIS.
+3. If query relates to data but lacks specific operations, return VAGUE_EXPLORATION.
+
+## Output Format
+
+```json
+{
+  "intent_type": "chitchat | explicit_analysis | vague_exploration",
+  "confidence": 0.0-1.0,
+  "reasoning": "classification justification",
+  "key_indicators": ["indicator_1", "indicator_2"],
+  "extracted_params": {}
+}
+```
+
+Note: intent_type must be lowercase with underscores.
+
+For EXPLICIT_ANALYSIS, populate extracted_params with identified parameters (time ranges, value thresholds, category names, operation targets).

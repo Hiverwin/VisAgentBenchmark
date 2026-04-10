@@ -1,0 +1,128 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": null,
+  "width": 780,
+  "height": 620,
+  "background": "#0e0f1a",
+  "config": {
+    "font": "DM Sans",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "ticks": false,
+      "labelColor": "#9a9aaa",
+      "labelFontSize": 11.5,
+      "labelFontWeight": 400,
+      "titleColor": "#7a7a8a",
+      "titleFontSize": 12,
+      "titleFontWeight": 500,
+      "titlePadding": 14,
+      "gridColor": "#1e1f30"
+    },
+    "legend": {
+      "disable": true
+    }
+  },
+  "mark": {
+    "type": "rect",
+    "cornerRadius": 3,
+    "stroke": "#0e0f1a",
+    "strokeWidth": 2.5
+  },
+  "encoding": {
+    "x": {
+      "field": "month",
+      "type": "nominal",
+      "sort": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ],
+      "axis": {
+        "orient": "top",
+        "title": null,
+        "labelAngle": 0,
+        "labelPadding": 12
+      },
+      "scale": {}
+    },
+    "y": {
+      "field": "city",
+      "type": "nominal",
+      "sort": {
+        "field": "lat",
+        "order": "descending"
+      },
+      "axis": {
+        "title": null,
+        "labelPadding": 12,
+        "labelFontSize": 12
+      },
+      "scale": {}
+    },
+    "color": {
+      "field": "temp",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          -15,
+          -5,
+          0,
+          5,
+          10,
+          15,
+          20,
+          25,
+          30,
+          35
+        ],
+        "range": [
+          "#1B1F3B",
+          "#2A4A7F",
+          "#3C78B5",
+          "#5BAACC",
+          "#8ED1C0",
+          "#F0F0D0",
+          "#FDD576",
+          "#F5A623",
+          "#E8712B",
+          "#D13B29",
+          "#7A0C1E"
+        ],
+        "interpolate": "lab"
+      },
+      "legend": null
+    },
+    "tooltip": [
+      {
+        "field": "city",
+        "type": "nominal",
+        "title": "City"
+      },
+      {
+        "field": "month",
+        "type": "nominal",
+        "title": "Month"
+      },
+      {
+        "field": "temp",
+        "type": "quantitative",
+        "title": "Avg Temp (°C)",
+        "format": ".1f"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

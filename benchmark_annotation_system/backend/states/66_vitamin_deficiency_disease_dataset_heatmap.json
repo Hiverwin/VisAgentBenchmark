@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Heatmap: vitamin_c_percent_rda by smoking_status and alcohol_consumption",
+  "width": 600,
+  "height": 400,
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "smoking_status",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "alcohol_consumption",
+      "type": "nominal",
+      "scale": {}
+    },
+    "color": {
+      "aggregate": "mean",
+      "field": "vitamin_c_percent_rda",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "blues"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "smoking_status",
+        "type": "nominal"
+      },
+      {
+        "field": "alcohol_consumption",
+        "type": "nominal"
+      },
+      {
+        "field": "vitamin_c_percent_rda",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

@@ -1,0 +1,52 @@
+{
+  "task_type": "clear_single",
+  "task_id": "107_line_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/107_survive_to_65_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use detect_anomalies in order to know Use detect_anomalies with threshold equal to 2 to identify which country shows the most significant anomaly in male survival rate.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "China",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "detect_anomalies",
+            "reasoning": "Detect anomalies in survival rate trends across all countries"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "detect_anomalies",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "threshold": 2.0
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Year",
+            "y": "Survival to age 65, male (% of cohort)",
+            "color": "Entity"
+          }
+        }
+      }
+    }
+  ]
+}

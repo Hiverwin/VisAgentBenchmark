@@ -1,0 +1,530 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Parallel: ign_scores",
+  "width": 600,
+  "height": 400,
+  "encoding": {
+    "x": {
+      "field": "dimension",
+      "type": "nominal",
+      "sort": [
+        "Action",
+        "Action, Adventure",
+        "Adventure",
+        "Fighting",
+        "Platformer"
+      ],
+      "axis": {
+        "title": null,
+        "labelAngle": 0
+      },
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "dimension",
+        "type": "nominal"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Action"
+          },
+          {
+            "dimension": "Action, Adventure"
+          },
+          {
+            "dimension": "Adventure"
+          },
+          {
+            "dimension": "Fighting"
+          },
+          {
+            "dimension": "Platformer"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#ccc"
+      },
+      "encoding": {}
+    },
+    {
+      "mark": {
+        "type": "line",
+        "opacity": 0.5,
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "normalized_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "detail": {
+          "field": "_index",
+          "type": "nominal"
+        },
+        "color": {
+          "field": "Platform",
+          "type": "nominal",
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "dimension",
+            "type": "nominal"
+          },
+          {
+            "field": "normalized_value",
+            "type": "quantitative"
+          },
+          {
+            "field": "Platform",
+            "type": "nominal"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Action",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 5.90360824742268
+          },
+          {
+            "dimension": "Action",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 6.719047619047618
+          },
+          {
+            "dimension": "Action",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 7.702857142857144
+          },
+          {
+            "dimension": "Action, Adventure",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 6.133333333333334
+          },
+          {
+            "dimension": "Action, Adventure",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 7.481818181818181
+          },
+          {
+            "dimension": "Action, Adventure",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 8.5
+          },
+          {
+            "dimension": "Adventure",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 5.3076923076923075
+          },
+          {
+            "dimension": "Adventure",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 6.821428571428571
+          },
+          {
+            "dimension": "Adventure",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 8.057142857142859
+          },
+          {
+            "dimension": "Fighting",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 4.5
+          },
+          {
+            "dimension": "Fighting",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 7.02962962962963
+          },
+          {
+            "dimension": "Fighting",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 8.2
+          },
+          {
+            "dimension": "Platformer",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 6.352941176470588
+          },
+          {
+            "dimension": "Platformer",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 7.25
+          },
+          {
+            "dimension": "Platformer",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 8.56875
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'max'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Action",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 5.90360824742268
+          },
+          {
+            "dimension": "Action",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 6.719047619047618
+          },
+          {
+            "dimension": "Action",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 7.702857142857144
+          },
+          {
+            "dimension": "Action, Adventure",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 6.133333333333334
+          },
+          {
+            "dimension": "Action, Adventure",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 7.481818181818181
+          },
+          {
+            "dimension": "Action, Adventure",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 8.5
+          },
+          {
+            "dimension": "Adventure",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 5.3076923076923075
+          },
+          {
+            "dimension": "Adventure",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 6.821428571428571
+          },
+          {
+            "dimension": "Adventure",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 8.057142857142859
+          },
+          {
+            "dimension": "Fighting",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 4.5
+          },
+          {
+            "dimension": "Fighting",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 7.02962962962963
+          },
+          {
+            "dimension": "Fighting",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 8.2
+          },
+          {
+            "dimension": "Platformer",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 6.352941176470588
+          },
+          {
+            "dimension": "Platformer",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 7.25
+          },
+          {
+            "dimension": "Platformer",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 8.56875
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'mid'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Action",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 5.90360824742268
+          },
+          {
+            "dimension": "Action",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 6.719047619047618
+          },
+          {
+            "dimension": "Action",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 7.702857142857144
+          },
+          {
+            "dimension": "Action, Adventure",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 6.133333333333334
+          },
+          {
+            "dimension": "Action, Adventure",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 7.481818181818181
+          },
+          {
+            "dimension": "Action, Adventure",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 8.5
+          },
+          {
+            "dimension": "Adventure",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 5.3076923076923075
+          },
+          {
+            "dimension": "Adventure",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 6.821428571428571
+          },
+          {
+            "dimension": "Adventure",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 8.057142857142859
+          },
+          {
+            "dimension": "Fighting",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 4.5
+          },
+          {
+            "dimension": "Fighting",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 7.02962962962963
+          },
+          {
+            "dimension": "Fighting",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 8.2
+          },
+          {
+            "dimension": "Platformer",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 6.352941176470588
+          },
+          {
+            "dimension": "Platformer",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 7.25
+          },
+          {
+            "dimension": "Platformer",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 8.56875
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'min'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "axisX": {
+      "domain": false,
+      "labelAngle": 0,
+      "tickColor": "#ccc",
+      "title": null
+    },
+    "view": {
+      "stroke": null
+    },
+    "style": {
+      "label": {
+        "baseline": "middle",
+        "align": "right",
+        "dx": -5
+      },
+      "tick": {
+        "orient": "horizontal"
+      }
+    }
+  },
+  "transform": [],
+  "params": []
+}

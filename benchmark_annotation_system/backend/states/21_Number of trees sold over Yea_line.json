@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "2010-2016 : Number of trees sold over Year",
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "temporal",
+      "scale": {}
+    },
+    "y": {
+      "field": "Number of trees sold",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "color": {
+      "field": "Type of tree",
+      "type": "nominal",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "Year",
+        "type": "temporal"
+      },
+      {
+        "field": "Number of trees sold",
+        "type": "quantitative"
+      },
+      {
+        "field": "Type of tree",
+        "type": "nominal"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

@@ -1,0 +1,54 @@
+{
+  "task_type": "clear_single",
+  "task_id": "37_parallel_cs_08",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/37_cancer_parallel .json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_08",
+      "question": "Use highlight_category in order to know Use highlight_category with field equal to Diagnosis, values equal to M to highlight malignant tumors. Which dimension shows the highest normalized value for malignant tumors?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Radius (mean)",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_category",
+            "reasoning": "Highlight malignant tumors to identify which dimension shows the highest normalized value"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "field,values",
+                  "values": [
+                    "Diagnosis",
+                    "M"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension"
+          }
+        }
+      }
+    }
+  ]
+}

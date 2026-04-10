@@ -1,0 +1,44 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Scatter Plot: math score vs reading score",
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "point",
+    "filled": true,
+    "opacity": 0.7
+  },
+  "encoding": {
+    "x": {
+      "field": "math score",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "y": {
+      "field": "reading score",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "color": {
+      "field": "test preparation course",
+      "type": "nominal",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "math score",
+        "type": "quantitative"
+      },
+      {
+        "field": "reading score",
+        "type": "quantitative"
+      },
+      {
+        "field": "test preparation course",
+        "type": "nominal"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

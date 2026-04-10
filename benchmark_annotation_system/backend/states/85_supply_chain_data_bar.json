@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Bar Chart: Price by Customer demographics",
+  "width": 600,
+  "height": 400,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Customer demographics",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "Price",
+      "type": "quantitative",
+      "aggregate": "mean",
+      "scale": {}
+    },
+    "color": {
+      "field": "Product type",
+      "type": "nominal",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "Customer demographics",
+        "type": "nominal"
+      },
+      {
+        "field": "Price",
+        "type": "quantitative",
+        "aggregate": "mean"
+      },
+      {
+        "field": "Product type",
+        "type": "nominal"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

@@ -1,0 +1,48 @@
+{
+  "task_type": "clear_single",
+  "task_id": "100_sankey_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/100_sankey_patient.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use calculate_conversion_rate in order to know Use calculate_conversion_rate with node_name equal to CT Scan. What is the largest inflow value for CT Scan?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "260",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "calculate_conversion_rate",
+            "reasoning": "Use calculate_conversion_rate to analyze CT Scan node and identify the largest inflow value"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "calculate_conversion_rate",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "CT Scan"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {}
+        }
+      }
+    }
+  ]
+}

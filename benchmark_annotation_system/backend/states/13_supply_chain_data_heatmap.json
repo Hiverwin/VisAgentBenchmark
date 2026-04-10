@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Heatmap: Price by Product type and Customer demographics",
+  "width": 600,
+  "height": 400,
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "Product type",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "Customer demographics",
+      "type": "nominal",
+      "scale": {}
+    },
+    "color": {
+      "aggregate": "mean",
+      "field": "Price",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "blues"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Product type",
+        "type": "nominal"
+      },
+      {
+        "field": "Customer demographics",
+        "type": "nominal"
+      },
+      {
+        "field": "Price",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

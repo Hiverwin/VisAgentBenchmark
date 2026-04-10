@@ -1,0 +1,53 @@
+{
+  "task_type": "clear_single",
+  "task_id": "22_scatter_cs_04",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/22_Employee_Attrition_DataSet_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_04",
+      "question": "Use calculate_correlation in order to know Use calculate_correlation with method equal to pearson to compute the correlation between Distance From Home and Monthly Income.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "-0.012",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "calculate_correlation",
+            "reasoning": "Calculate the Pearson correlation coefficient between DistanceFromHome and MonthlyIncome to determine their relationship"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "pearson"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "DistanceFromHome",
+            "y": "MonthlyIncome",
+            "color": "WorkLifeBalance",
+            "size": "YearsAtCompany"
+          }
+        }
+      }
+    }
+  ]
+}

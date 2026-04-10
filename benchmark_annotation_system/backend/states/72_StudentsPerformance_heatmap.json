@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Heatmap: writing score by race/ethnicity and parental level of education",
+  "width": 600,
+  "height": 400,
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "race/ethnicity",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "parental level of education",
+      "type": "nominal",
+      "scale": {}
+    },
+    "color": {
+      "aggregate": "mean",
+      "field": "writing score",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "blues"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "race/ethnicity",
+        "type": "nominal"
+      },
+      {
+        "field": "parental level of education",
+        "type": "nominal"
+      },
+      {
+        "field": "writing score",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

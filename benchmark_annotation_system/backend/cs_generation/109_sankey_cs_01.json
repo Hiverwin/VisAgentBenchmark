@@ -1,0 +1,48 @@
+{
+  "task_type": "clear_single",
+  "task_id": "109_sankey_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/109_sankey_seo.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use calculate_conversion_rate in order to know Use calculate_conversion_rate with node_name equal to Google Organic. What is the largest outflow value for Google Organic?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "22000",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "calculate_conversion_rate",
+            "reasoning": "Calculate conversion rate for Google Organic and identify its largest outflow"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "calculate_conversion_rate",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Google Organic"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {}
+        }
+      }
+    }
+  ]
+}

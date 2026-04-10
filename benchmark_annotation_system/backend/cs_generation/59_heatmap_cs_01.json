@@ -1,0 +1,53 @@
+{
+  "task_type": "clear_single",
+  "task_id": "59_heatmap_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/59_health care diabetes_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use find_extremes in order to know Use find_extremes to identify which Pregnancies-Outcome combination has the highest average BloodPressure.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Pregnancies=9, Outcome=1",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "find_extremes",
+            "reasoning": "Find the cell with the highest average BloodPressure in the heatmap"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "find_extremes",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "top_n": 5,
+                  "mode": "both"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Pregnancies",
+            "y": "Outcome",
+            "color": "BloodPressure"
+          }
+        }
+      }
+    }
+  ]
+}

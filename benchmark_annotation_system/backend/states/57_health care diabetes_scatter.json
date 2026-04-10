@@ -1,0 +1,52 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Scatter Plot: DiabetesPedigreeFunction vs Glucose",
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "point",
+    "filled": true,
+    "opacity": 0.7
+  },
+  "encoding": {
+    "x": {
+      "field": "DiabetesPedigreeFunction",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "y": {
+      "field": "Glucose",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "color": {
+      "field": "Outcome",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "size": {
+      "field": "Pregnancies",
+      "type": "quantitative"
+    },
+    "tooltip": [
+      {
+        "field": "DiabetesPedigreeFunction",
+        "type": "quantitative"
+      },
+      {
+        "field": "Glucose",
+        "type": "quantitative"
+      },
+      {
+        "field": "Outcome",
+        "type": "quantitative"
+      },
+      {
+        "field": "Pregnancies",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

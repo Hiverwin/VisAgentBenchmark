@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Line Chart: Electricity from renewables (TWh) over Year",
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "y": {
+      "field": "Electricity from renewables (TWh)",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "color": {
+      "field": "Entity",
+      "type": "nominal",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "Year",
+        "type": "quantitative"
+      },
+      {
+        "field": "Electricity from renewables (TWh)",
+        "type": "quantitative"
+      },
+      {
+        "field": "Entity",
+        "type": "nominal"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

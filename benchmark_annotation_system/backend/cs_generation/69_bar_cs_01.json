@@ -1,0 +1,52 @@
+{
+  "task_type": "clear_single",
+  "task_id": "69_bar_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/69_top_100_linkedin_companies_2026_bar.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use highlight_top_n in order to know Use highlight_top_n with n equal to 5 to identify which company has the highest followers among the top 5 companies.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Google",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_top_n",
+            "reasoning": "Highlight the top 5 companies to identify the one with the highest followers"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_top_n",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "n": 2,
+                  "order": "descending"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "company",
+            "y": "followers"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+# Core Dependencies
+python-dotenv==1.0.0
+kaggle==1.6.0
+numpy==1.24.3
+scipy==1.10.1
+
+# Machine Learning & Data Analysis
+scikit-learn==1.3.0
+pandas==2.0.3
+
+# VLM API Clients
+openai>=1.0.0            # OpenRouter / OpenAI compatible client
+requests==2.31.0         # HTTP client
+# dashscope==1.14.0      # Optional: legacy DashScope flow
+
+# openai>=1.0.0          # OpenAI GPT-4V
+# anthropic>=0.18.0      # Anthropic Claude
+# google-generativeai    # Google Gemini
+# Optional: other VLM clients (install as needed)
+
+# Visualization & Chart Rendering
+altair==5.0.1            # Vega-Lite specs
+vega==4.0.0              # Vega rendering
+vl-convert-python>=1.0.0 # Python-side rendering (recommended; no Node.js)
+
+# Image Processing
+Pillow==10.0.0
+
+# Utilities
+pydantic==2.3.0          # Data validation
+
+# Testing (Optional)
+pytest==7.4.0
+pytest-cov==4.1.0
+
+# Evaluation (Optional - for semantic matching)
+bert-score>=0.3.13  # BERTScore for semantic answer matching
+# Note: bert-score requires torch and transformers
+
+# Code Quality (Optional, for development)
+# black==23.7.0
+# flake8==6.1.0
+# mypy==1.5.1
+
+
+streamlit>=1.28.0
+
+# Installation:
+# 1. Base: pip install -r requirements.txt
+# 2. For additional VLM backends: uncomment the relevant lines above
+# 3. Chart rendering:
+#    - Python (recommended): vl-convert-python is included
+#    - Node.js: npm install -g vega vega-lite vega-cli canvas

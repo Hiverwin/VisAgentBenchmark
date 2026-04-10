@@ -1,0 +1,44 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Scatter Plot: sugarpercent vs winpercent",
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "point",
+    "filled": true,
+    "opacity": 0.7
+  },
+  "encoding": {
+    "x": {
+      "field": "sugarpercent",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "y": {
+      "field": "winpercent",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "color": {
+      "field": "chocolate",
+      "type": "nominal",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "sugarpercent",
+        "type": "quantitative"
+      },
+      {
+        "field": "winpercent",
+        "type": "quantitative"
+      },
+      {
+        "field": "chocolate",
+        "type": "nominal"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

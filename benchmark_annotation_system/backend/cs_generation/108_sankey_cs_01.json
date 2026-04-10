@@ -1,0 +1,48 @@
+{
+  "task_type": "clear_single",
+  "task_id": "108_sankey_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/108_insurance_sankey.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use filter_flow with min_value equal to 1000.0 in order to know Use filter_flow with min_value equal to 1000 to see how many inflows will node Full Payout have after filtering.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "5",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_flow",
+            "reasoning": "Filter flows by minimum value and count inflows to Full Payout node"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_flow",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "min_value": 1000.0
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {}
+        }
+      }
+    }
+  ]
+}

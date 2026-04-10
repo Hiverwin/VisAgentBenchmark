@@ -1,0 +1,53 @@
+{
+  "task_type": "clear_single",
+  "task_id": "76_line_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/76_Refined_Employment_Telecom_Services_NA_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use zoom_x_region in order to know Use zoom_x_region with start equal to 2015, end equal to 2020 to identify which country has the highest employment in telecom services during this period.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "United States",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_x_region",
+            "reasoning": "Zoom into the 2015-2020 period to identify the country with highest employment"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_x_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2015",
+                  "end": "2020"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Year",
+            "y": "Employment_Thousands",
+            "color": "Country"
+          }
+        }
+      }
+    }
+  ]
+}

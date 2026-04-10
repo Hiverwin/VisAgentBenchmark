@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Heatmap: Order Value (INR) by Platform and Service Rating",
+  "width": 600,
+  "height": 400,
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "Platform",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "Service Rating",
+      "type": "nominal",
+      "scale": {}
+    },
+    "color": {
+      "aggregate": "mean",
+      "field": "Order Value (INR)",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "blues"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Platform",
+        "type": "nominal"
+      },
+      {
+        "field": "Service Rating",
+        "type": "nominal"
+      },
+      {
+        "field": "Order Value (INR)",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

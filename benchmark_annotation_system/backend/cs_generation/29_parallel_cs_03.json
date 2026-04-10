@@ -1,0 +1,54 @@
+{
+  "task_type": "clear_single",
+  "task_id": "29_parallel_cs_03",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/29_students_ai_usage_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_03",
+      "question": "Use highlight_category in order to know Use highlight_category with field equal to uses_ai, values equal to Yes to highlight students who use AI. Which group shows higher grades_after_ai values?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Yes",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_category",
+            "reasoning": "Highlight students who use AI to compare their grades_after_ai with those who do not use AI"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "field,values",
+                  "values": [
+                    "uses_ai",
+                    "Yes"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension"
+          }
+        }
+      }
+    }
+  ]
+}

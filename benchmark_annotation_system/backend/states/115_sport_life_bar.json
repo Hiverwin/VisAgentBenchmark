@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Bar Chart: Sports Footwear Sales :units_sold by brand",
+  "width": 600,
+  "height": 400,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "brand",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "units_sold",
+      "type": "quantitative",
+      "aggregate": "mean",
+      "scale": {}
+    },
+    "color": {
+      "field": "customer_income_level",
+      "type": "nominal",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "brand",
+        "type": "nominal"
+      },
+      {
+        "field": "units_sold",
+        "type": "quantitative",
+        "aggregate": "mean"
+      },
+      {
+        "field": "customer_income_level",
+        "type": "nominal"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

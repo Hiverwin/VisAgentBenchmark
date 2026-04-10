@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Heatmap: Total_Bill_Amount by Gender and Chronic_Disease",
+  "width": 600,
+  "height": 400,
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "Gender",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "Chronic_Disease",
+      "type": "nominal",
+      "scale": {}
+    },
+    "color": {
+      "aggregate": "mean",
+      "field": "Total_Bill_Amount",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "blues"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Gender",
+        "type": "nominal"
+      },
+      {
+        "field": "Chronic_Disease",
+        "type": "nominal"
+      },
+      {
+        "field": "Total_Bill_Amount",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

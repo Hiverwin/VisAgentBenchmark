@@ -1,0 +1,56 @@
+{
+  "task_type": "clear_single",
+  "task_id": "75_bar_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/75_Refined_Employment_Telecom_Services_2024_bar.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use filter_subcategories with subcategories_to_remove equal to Continent;North America, South America, Asia in order to know Use filter_subcategories with field equal to Continent, values equal to North America, South America, Asia to identify which continent has the highest average employment in telecom services.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "North America",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_subcategories",
+            "reasoning": "Filter to show only North America, South America, and Asia continents to identify which has the highest average employment"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_subcategories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "subcategories_to_remove": [
+                    "Continent;North America",
+                    "South America",
+                    "Asia"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Country",
+            "y": "Employment_Thousands",
+            "color": "Continent"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "task_type": "clear_single",
+  "task_id": "51_scatter_cs_02",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/51_Train_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_02",
+      "question": "Use zoom_2d_region with x_range from 2000.0 to 4000.0, y_range from 150.0 to 250.0 in order to know Use zoom_2d_region with x_range from 2000 to 4000, y_range from 150 to 250 to determine which Mode of Shipment has the highest average Cost of the Product in this region.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Road",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_2d_region",
+            "reasoning": "Zoom into the specified region and calculate average Cost for each Mode of Shipment"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_2d_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    2000.0,
+                    4000.0
+                  ],
+                  "y_range": [
+                    150.0,
+                    250.0
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Weight_in_gms",
+            "y": "Cost_of_the_Product",
+            "color": "Mode_of_Shipment",
+            "size": "Customer_rating"
+          }
+        }
+      }
+    }
+  ]
+}

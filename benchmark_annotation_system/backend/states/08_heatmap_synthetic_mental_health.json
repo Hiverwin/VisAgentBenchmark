@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Heatmap: sleep_hours by diet_quality and weather",
+  "width": 600,
+  "height": 400,
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "diet_quality",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "weather",
+      "type": "nominal",
+      "scale": {}
+    },
+    "color": {
+      "aggregate": "mean",
+      "field": "sleep_hours",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "blues"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "diet_quality",
+        "type": "nominal"
+      },
+      {
+        "field": "weather",
+        "type": "nominal"
+      },
+      {
+        "field": "sleep_hours",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

@@ -1,0 +1,59 @@
+{
+  "task_type": "clear_single",
+  "task_id": "73_scatter_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/73_StudentsPerformance_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use zoom_2d_region with x_range from 80.0 to 100.0, y_range from 80.0 to 100.0 in order to know Use zoom_2d_region with xStart equal to 80, xEnd equal to 100, yStart equal to 80, yEnd equal to 100 to identify how many students have both math and reading scores above 80.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "106",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_2d_region",
+            "reasoning": "Zoom into the top-right region to count students with high scores in both subjects"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_2d_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    80.0,
+                    100.0
+                  ],
+                  "y_range": [
+                    80.0,
+                    100.0
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "math score",
+            "y": "reading score",
+            "color": "test preparation course"
+          }
+        }
+      }
+    }
+  ]
+}

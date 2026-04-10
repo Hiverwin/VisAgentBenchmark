@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Bar Chart: vitamin_d_percent_rda by sun_exposure",
+  "width": 600,
+  "height": 400,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "sun_exposure",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "vitamin_d_percent_rda",
+      "type": "quantitative",
+      "aggregate": "mean",
+      "scale": {}
+    },
+    "color": {
+      "field": "diet_type",
+      "type": "nominal",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "sun_exposure",
+        "type": "nominal"
+      },
+      {
+        "field": "vitamin_d_percent_rda",
+        "type": "quantitative",
+        "aggregate": "mean"
+      },
+      {
+        "field": "diet_type",
+        "type": "nominal"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

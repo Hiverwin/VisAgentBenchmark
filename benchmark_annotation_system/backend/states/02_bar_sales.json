@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Sales by Region",
+  "width": 500,
+  "height": 350,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "region",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "sales",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "color": {
+      "field": "product",
+      "type": "nominal",
+      "scale": {}
+    },
+    "xOffset": {
+      "field": "product"
+    },
+    "tooltip": [
+      {
+        "field": "region",
+        "type": "nominal"
+      },
+      {
+        "field": "sales",
+        "type": "quantitative"
+      },
+      {
+        "field": "product",
+        "type": "nominal"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

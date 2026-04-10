@@ -1,0 +1,56 @@
+{
+  "task_type": "clear_single",
+  "task_id": "113_parallel_cs_05",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/113_nime_less_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_05",
+      "question": "Use hide_dimensions in order to know Use hide_dimensions with mode equal to hide, dimensions equal to popularity, members, episodes to evaluate which anime type has the highest average score.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "TV",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "hide_dimensions",
+            "reasoning": "Hide other dimensions to focus on score dimension and identify the type with highest score"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "hide_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "dimensions": [
+                    "hide",
+                    "popularity",
+                    "members",
+                    "episodes"
+                  ],
+                  "mode": "hide"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension"
+          }
+        }
+      }
+    }
+  ]
+}

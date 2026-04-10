@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Bar Chart: Fat_Percentage by Workout_Type",
+  "width": 600,
+  "height": 400,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Workout_Type",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "Fat_Percentage",
+      "type": "quantitative",
+      "aggregate": "mean",
+      "scale": {}
+    },
+    "color": {
+      "field": "Experience_Level",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "Workout_Type",
+        "type": "nominal"
+      },
+      {
+        "field": "Fat_Percentage",
+        "type": "quantitative",
+        "aggregate": "mean"
+      },
+      {
+        "field": "Experience_Level",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Line Chart: Revenue_Billions over Year",
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "y": {
+      "field": "Revenue_Billions",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "color": {
+      "field": "Product",
+      "type": "nominal",
+      "scale": {}
+    }
+  },
+  "transform": [],
+  "params": []
+}

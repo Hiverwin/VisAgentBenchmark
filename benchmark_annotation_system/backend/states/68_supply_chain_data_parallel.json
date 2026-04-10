@@ -1,0 +1,472 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Parallel: supply_chain_data",
+  "width": 600,
+  "height": 400,
+  "encoding": {
+    "x": {
+      "field": "dimension",
+      "type": "nominal",
+      "sort": [
+        "Price",
+        "Number of products sold",
+        "Revenue generated",
+        "Shipping costs"
+      ],
+      "axis": {
+        "title": null,
+        "labelAngle": 0
+      },
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "dimension",
+        "type": "nominal"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Price"
+          },
+          {
+            "dimension": "Number of products sold"
+          },
+          {
+            "dimension": "Revenue generated"
+          },
+          {
+            "dimension": "Shipping costs"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#ccc"
+      },
+      "encoding": {}
+    },
+    {
+      "mark": {
+        "type": "line",
+        "opacity": 0.5,
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "normalized_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "detail": {
+          "field": "_index",
+          "type": "nominal"
+        },
+        "color": {
+          "field": "Product type",
+          "type": "nominal",
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "dimension",
+            "type": "nominal"
+          },
+          {
+            "field": "normalized_value",
+            "type": "quantitative"
+          },
+          {
+            "field": "Product type",
+            "type": "nominal"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Price",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.6999760138659377
+          },
+          {
+            "dimension": "Price",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 51.239830500537565
+          },
+          {
+            "dimension": "Price",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 99.1713286386242
+          },
+          {
+            "dimension": "Number of products sold",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 8.0
+          },
+          {
+            "dimension": "Number of products sold",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 392.5
+          },
+          {
+            "dimension": "Number of products sold",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 996.0
+          },
+          {
+            "dimension": "Revenue generated",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1061.618523013288
+          },
+          {
+            "dimension": "Revenue generated",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 6006.352023397045
+          },
+          {
+            "dimension": "Revenue generated",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 9866.465457979695
+          },
+          {
+            "dimension": "Shipping costs",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0134865660958965
+          },
+          {
+            "dimension": "Shipping costs",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 5.320534017162109
+          },
+          {
+            "dimension": "Shipping costs",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 9.92981624527726
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'max'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Price",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.6999760138659377
+          },
+          {
+            "dimension": "Price",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 51.239830500537565
+          },
+          {
+            "dimension": "Price",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 99.1713286386242
+          },
+          {
+            "dimension": "Number of products sold",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 8.0
+          },
+          {
+            "dimension": "Number of products sold",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 392.5
+          },
+          {
+            "dimension": "Number of products sold",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 996.0
+          },
+          {
+            "dimension": "Revenue generated",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1061.618523013288
+          },
+          {
+            "dimension": "Revenue generated",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 6006.352023397045
+          },
+          {
+            "dimension": "Revenue generated",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 9866.465457979695
+          },
+          {
+            "dimension": "Shipping costs",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0134865660958965
+          },
+          {
+            "dimension": "Shipping costs",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 5.320534017162109
+          },
+          {
+            "dimension": "Shipping costs",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 9.92981624527726
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'mid'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Price",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.6999760138659377
+          },
+          {
+            "dimension": "Price",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 51.239830500537565
+          },
+          {
+            "dimension": "Price",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 99.1713286386242
+          },
+          {
+            "dimension": "Number of products sold",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 8.0
+          },
+          {
+            "dimension": "Number of products sold",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 392.5
+          },
+          {
+            "dimension": "Number of products sold",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 996.0
+          },
+          {
+            "dimension": "Revenue generated",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1061.618523013288
+          },
+          {
+            "dimension": "Revenue generated",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 6006.352023397045
+          },
+          {
+            "dimension": "Revenue generated",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 9866.465457979695
+          },
+          {
+            "dimension": "Shipping costs",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0134865660958965
+          },
+          {
+            "dimension": "Shipping costs",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 5.320534017162109
+          },
+          {
+            "dimension": "Shipping costs",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 9.92981624527726
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'min'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "axisX": {
+      "domain": false,
+      "labelAngle": 0,
+      "tickColor": "#ccc",
+      "title": null
+    },
+    "view": {
+      "stroke": null
+    },
+    "style": {
+      "label": {
+        "baseline": "middle",
+        "align": "right",
+        "dx": -5
+      },
+      "tick": {
+        "orient": "horizontal"
+      }
+    }
+  },
+  "transform": [],
+  "params": []
+}

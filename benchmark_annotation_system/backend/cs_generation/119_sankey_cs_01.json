@@ -1,0 +1,52 @@
+{
+  "task_type": "clear_single",
+  "task_id": "119_sankey_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/119_sankey_game.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use color_flows in order to know Use color_flows with color equal to #e74c3c, nodes equal to Daily Quests to evaluate which source contributes the most gold to Daily Quests.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Dungeon Runs",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "color_flows",
+            "reasoning": "Color the flows to Daily Quests to identify the largest contributing source"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "color_flows",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "nodes": [
+                    "#e74c3c",
+                    "Daily Quests"
+                  ],
+                  "color": "#e74c3c"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {}
+        }
+      }
+    }
+  ]
+}

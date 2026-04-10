@@ -1,0 +1,53 @@
+{
+  "task_type": "clear_single",
+  "task_id": "70_line_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/70_one_person_ai_work_and_burnout_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use zoom_x_region in order to know Use zoom_x_region with start equal to 80, end equal to 100 to identify the day with the highest AI tool usage percentage in this period.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Day 88",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_x_region",
+            "reasoning": "Zoom into the day 80-100 period to find the day with maximum AI tool usage"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_x_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "80",
+                  "end": "100"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Day",
+            "y": "AI_Tool_Usage_%",
+            "color": "Bugs_Introduced"
+          }
+        }
+      }
+    }
+  ]
+}

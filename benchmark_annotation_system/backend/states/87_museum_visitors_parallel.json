@@ -1,0 +1,60 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Parallel: museum_visitors",
+  "width": 600,
+  "height": 400,
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "opacity": 0.3,
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "dimension",
+          "type": "nominal",
+          "sort": [
+            "Avila Adobe",
+            "Firehouse Museum",
+            "Chinese American Museum",
+            "America Tropical Interpretive Center"
+          ],
+          "axis": {
+            "title": null,
+            "labelAngle": 0
+          },
+          "scale": {}
+        },
+        "y": {
+          "field": "value",
+          "type": "quantitative",
+          "axis": {
+            "title": "Value"
+          },
+          "scale": {}
+        },
+        "detail": {
+          "field": "_index",
+          "type": "nominal"
+        },
+        "tooltip": [
+          {
+            "field": "dimension",
+            "type": "nominal"
+          },
+          {
+            "field": "normalized_value",
+            "type": "quantitative"
+          },
+          {
+            "field": "value",
+            "type": "quantitative"
+          }
+        ]
+      }
+    }
+  ],
+  "transform": [],
+  "params": []
+}

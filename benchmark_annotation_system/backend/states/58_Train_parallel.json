@@ -1,0 +1,530 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Parallel: E-Commerce Shipping Data",
+  "width": 600,
+  "height": 400,
+  "encoding": {
+    "x": {
+      "field": "dimension",
+      "type": "nominal",
+      "sort": [
+        "Customer_care_calls",
+        "Customer_rating",
+        "Cost_of_the_Product",
+        "Prior_purchases",
+        "Discount_offered"
+      ],
+      "axis": {
+        "title": null,
+        "labelAngle": 0
+      },
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "dimension",
+        "type": "nominal"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Customer_care_calls"
+          },
+          {
+            "dimension": "Customer_rating"
+          },
+          {
+            "dimension": "Cost_of_the_Product"
+          },
+          {
+            "dimension": "Prior_purchases"
+          },
+          {
+            "dimension": "Discount_offered"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#ccc"
+      },
+      "encoding": {}
+    },
+    {
+      "mark": {
+        "type": "line",
+        "opacity": 0.5,
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "normalized_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "detail": {
+          "field": "_index",
+          "type": "nominal"
+        },
+        "color": {
+          "field": "Product_importance",
+          "type": "nominal",
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "dimension",
+            "type": "nominal"
+          },
+          {
+            "field": "normalized_value",
+            "type": "quantitative"
+          },
+          {
+            "field": "Product_importance",
+            "type": "nominal"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Customer_care_calls",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 2.0
+          },
+          {
+            "dimension": "Customer_care_calls",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 4.0
+          },
+          {
+            "dimension": "Customer_care_calls",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 7.0
+          },
+          {
+            "dimension": "Customer_rating",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "Customer_rating",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 3.0
+          },
+          {
+            "dimension": "Customer_rating",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 5.0
+          },
+          {
+            "dimension": "Cost_of_the_Product",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 96.0
+          },
+          {
+            "dimension": "Cost_of_the_Product",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 214.0
+          },
+          {
+            "dimension": "Cost_of_the_Product",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 310.0
+          },
+          {
+            "dimension": "Prior_purchases",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 2.0
+          },
+          {
+            "dimension": "Prior_purchases",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 3.0
+          },
+          {
+            "dimension": "Prior_purchases",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 10.0
+          },
+          {
+            "dimension": "Discount_offered",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "Discount_offered",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 7.0
+          },
+          {
+            "dimension": "Discount_offered",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 65.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'max'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Customer_care_calls",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 2.0
+          },
+          {
+            "dimension": "Customer_care_calls",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 4.0
+          },
+          {
+            "dimension": "Customer_care_calls",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 7.0
+          },
+          {
+            "dimension": "Customer_rating",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "Customer_rating",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 3.0
+          },
+          {
+            "dimension": "Customer_rating",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 5.0
+          },
+          {
+            "dimension": "Cost_of_the_Product",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 96.0
+          },
+          {
+            "dimension": "Cost_of_the_Product",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 214.0
+          },
+          {
+            "dimension": "Cost_of_the_Product",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 310.0
+          },
+          {
+            "dimension": "Prior_purchases",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 2.0
+          },
+          {
+            "dimension": "Prior_purchases",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 3.0
+          },
+          {
+            "dimension": "Prior_purchases",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 10.0
+          },
+          {
+            "dimension": "Discount_offered",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "Discount_offered",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 7.0
+          },
+          {
+            "dimension": "Discount_offered",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 65.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'mid'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Customer_care_calls",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 2.0
+          },
+          {
+            "dimension": "Customer_care_calls",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 4.0
+          },
+          {
+            "dimension": "Customer_care_calls",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 7.0
+          },
+          {
+            "dimension": "Customer_rating",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "Customer_rating",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 3.0
+          },
+          {
+            "dimension": "Customer_rating",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 5.0
+          },
+          {
+            "dimension": "Cost_of_the_Product",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 96.0
+          },
+          {
+            "dimension": "Cost_of_the_Product",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 214.0
+          },
+          {
+            "dimension": "Cost_of_the_Product",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 310.0
+          },
+          {
+            "dimension": "Prior_purchases",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 2.0
+          },
+          {
+            "dimension": "Prior_purchases",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 3.0
+          },
+          {
+            "dimension": "Prior_purchases",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 10.0
+          },
+          {
+            "dimension": "Discount_offered",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "Discount_offered",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 7.0
+          },
+          {
+            "dimension": "Discount_offered",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 65.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'min'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "axisX": {
+      "domain": false,
+      "labelAngle": 0,
+      "tickColor": "#ccc",
+      "title": null
+    },
+    "view": {
+      "stroke": null
+    },
+    "style": {
+      "label": {
+        "baseline": "middle",
+        "align": "right",
+        "dx": -5
+      },
+      "tick": {
+        "orient": "horizontal"
+      }
+    }
+  },
+  "transform": [],
+  "params": []
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": " America Tropical Interpretive Center Visitor over Date",
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {
+      "field": "Date",
+      "type": "temporal",
+      "scale": {}
+    },
+    "y": {
+      "field": "America Tropical Interpretive Center",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "Date",
+        "type": "temporal"
+      },
+      {
+        "field": "America Tropical Interpretive Center",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

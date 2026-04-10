@@ -1,0 +1,32 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Bar Chart: Calories by Beverage_category",
+  "width": 600,
+  "height": 400,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Beverage_category",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "Calories",
+      "type": "quantitative",
+      "aggregate": "mean",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "Beverage_category",
+        "type": "nominal"
+      },
+      {
+        "field": "Calories",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

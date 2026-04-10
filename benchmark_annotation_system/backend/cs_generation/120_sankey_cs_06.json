@@ -1,0 +1,48 @@
+{
+  "task_type": "clear_single",
+  "task_id": "120_sankey_cs_06",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/120_startup_Funding_sankey.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_06",
+      "question": "Use filter_flow with min_value equal to 5000.0 in order to know Use filter_flow with min_value equal to 5000 to see how many outflows will Operating Fund have after filtering.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "3",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_flow",
+            "reasoning": "Filter flows by minimum value and count outflows from Operating Fund node"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_flow",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "min_value": 5000.0
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {}
+        }
+      }
+    }
+  ]
+}

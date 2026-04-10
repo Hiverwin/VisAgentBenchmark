@@ -1,0 +1,57 @@
+{
+  "task_type": "clear_single",
+  "task_id": "14_line_cs_02",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/14_museum_visitors_line_multi.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_02",
+      "question": "Use filter_lines with lines_to_remove equal to [Avila Adobe, Chinese American Museum, America Tropical Interpretive Center] in order to know Which museum had the highest single-month visitor count?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Firehouse Museum",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_lines",
+            "reasoning": "Use filter_lines to filter out other museums and identify which museum had the highest single-month visitor count"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "lines_to_remove": [
+                    "Avila Adobe",
+                    "Chinese American Museum",
+                    "America Tropical Interpretive Center"
+                  ],
+                  "line_field": "lines_to_remove"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Date",
+            "y": "Visitors",
+            "color": "Museum"
+          }
+        }
+      }
+    }
+  ]
+}

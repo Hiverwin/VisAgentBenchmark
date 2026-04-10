@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Line Chart: AI_Tool_Usage_% over Day",
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {
+      "field": "Day",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "y": {
+      "field": "AI_Tool_Usage_%",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "color": {
+      "field": "Bugs_Introduced",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "Day",
+        "type": "quantitative"
+      },
+      {
+        "field": "AI_Tool_Usage_%",
+        "type": "quantitative"
+      },
+      {
+        "field": "Bugs_Introduced",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

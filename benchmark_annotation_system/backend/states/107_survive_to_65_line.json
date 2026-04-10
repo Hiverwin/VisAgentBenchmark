@@ -1,0 +1,29 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "China annual death rate in each Age group",
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "y": {
+      "field": "Survival to age 65, male (% of cohort)",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "color": {
+      "field": "Entity",
+      "type": "nominal",
+      "scale": {}
+    }
+  },
+  "transform": [],
+  "params": []
+}

@@ -1,0 +1,54 @@
+{
+  "task_type": "clear_single",
+  "task_id": "117_parallel_cs_04",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/117_startup_funding_dataset_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_04",
+      "question": "Use highlight_category in order to know Use highlight_category with field equal to Funding Stage, values equal to Series A to derive the average amount raised for Series A funding.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "25000000",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_category",
+            "reasoning": "Highlight Series A funding stage to analyze its average amount raised"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "field,values",
+                  "values": [
+                    "Funding Stage",
+                    "Series A"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension"
+          }
+        }
+      }
+    }
+  ]
+}

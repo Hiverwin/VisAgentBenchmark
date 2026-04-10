@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Bar Chart: Discount_offered by Product_importance",
+  "width": 600,
+  "height": 400,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Product_importance",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "Discount_offered",
+      "type": "quantitative",
+      "aggregate": "mean",
+      "scale": {}
+    },
+    "color": {
+      "field": "Customer_care_calls",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "Product_importance",
+        "type": "nominal"
+      },
+      {
+        "field": "Discount_offered",
+        "type": "quantitative",
+        "aggregate": "mean"
+      },
+      {
+        "field": "Customer_care_calls",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

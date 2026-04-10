@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Bar Chart: sleep_hours by diet_quality",
+  "width": 600,
+  "height": 400,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "diet_quality",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "sleep_hours",
+      "type": "quantitative",
+      "aggregate": "mean",
+      "scale": {}
+    },
+    "color": {
+      "field": "weather",
+      "type": "nominal",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "diet_quality",
+        "type": "nominal"
+      },
+      {
+        "field": "sleep_hours",
+        "type": "quantitative",
+        "aggregate": "mean"
+      },
+      {
+        "field": "weather",
+        "type": "nominal"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

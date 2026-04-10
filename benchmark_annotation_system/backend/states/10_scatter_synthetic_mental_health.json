@@ -1,0 +1,52 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Scatter Plot: sleep_hours vs screen_time",
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "point",
+    "filled": true,
+    "opacity": 0.7
+  },
+  "encoding": {
+    "x": {
+      "field": "sleep_hours",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "y": {
+      "field": "screen_time",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "color": {
+      "field": "diet_quality",
+      "type": "nominal",
+      "scale": {}
+    },
+    "size": {
+      "field": "exercise_minutes",
+      "type": "quantitative"
+    },
+    "tooltip": [
+      {
+        "field": "sleep_hours",
+        "type": "quantitative"
+      },
+      {
+        "field": "screen_time",
+        "type": "quantitative"
+      },
+      {
+        "field": "diet_quality",
+        "type": "nominal"
+      },
+      {
+        "field": "exercise_minutes",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

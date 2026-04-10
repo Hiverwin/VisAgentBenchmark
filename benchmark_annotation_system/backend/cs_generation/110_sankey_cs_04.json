@@ -1,0 +1,48 @@
+{
+  "task_type": "clear_single",
+  "task_id": "110_sankey_cs_04",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/110_sankey_trash.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_04",
+      "question": "Use trace_node in order to know Use trace_node with node_name equal to Residential to see which waste collection method receives the most waste from residential sources.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Dry Waste Bin",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "trace_node",
+            "reasoning": "Trace the Residential node to identify its largest outflow destination"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Residential"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {}
+        }
+      }
+    }
+  ]
+}

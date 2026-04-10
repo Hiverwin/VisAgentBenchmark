@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Temperature Heatmap",
+  "width": 400,
+  "height": 250,
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "month",
+      "type": "ordinal",
+      "scale": {}
+    },
+    "y": {
+      "field": "city",
+      "type": "nominal",
+      "scale": {}
+    },
+    "color": {
+      "field": "temp",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "blues"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "month",
+        "type": "ordinal"
+      },
+      {
+        "field": "city",
+        "type": "nominal"
+      },
+      {
+        "field": "temp",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

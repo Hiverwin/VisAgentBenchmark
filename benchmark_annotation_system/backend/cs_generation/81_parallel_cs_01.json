@@ -1,0 +1,57 @@
+{
+  "task_type": "clear_single",
+  "task_id": "81_parallel_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/81_gym_members_exercise_tracking_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use hide_dimensions in order to know Which workout type has the highest average normalized Session Duration?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "HIIT",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "hide_dimensions",
+            "reasoning": "Hide other dimensions to focus on Session Duration and identify the workout type with highest average"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "hide_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "dimensions": [
+                    "hide",
+                    "Weight (kg)",
+                    "Height (m)",
+                    "Avg_BPM",
+                    "Calories_Burned"
+                  ],
+                  "mode": "hide"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension"
+          }
+        }
+      }
+    }
+  ]
+}

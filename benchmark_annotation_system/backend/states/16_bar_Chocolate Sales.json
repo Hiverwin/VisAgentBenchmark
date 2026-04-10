@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Bar Chart: Boxes Shipped by Sales Person",
+  "width": 600,
+  "height": 400,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Sales Person",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "Boxes Shipped",
+      "type": "quantitative",
+      "aggregate": "mean",
+      "scale": {}
+    },
+    "color": {
+      "field": "Country",
+      "type": "nominal",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "Sales Person",
+        "type": "nominal"
+      },
+      {
+        "field": "Boxes Shipped",
+        "type": "quantitative",
+        "aggregate": "mean"
+      },
+      {
+        "field": "Country",
+        "type": "nominal"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

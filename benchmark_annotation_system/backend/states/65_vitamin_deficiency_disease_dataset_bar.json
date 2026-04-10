@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Bar Chart: vitamin_c_percent_rda by exercise_level",
+  "width": 600,
+  "height": 400,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "exercise_level",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "vitamin_c_percent_rda",
+      "type": "quantitative",
+      "aggregate": "mean",
+      "scale": {}
+    },
+    "color": {
+      "field": "diet_type",
+      "type": "nominal",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "exercise_level",
+        "type": "nominal"
+      },
+      {
+        "field": "vitamin_c_percent_rda",
+        "type": "quantitative",
+        "aggregate": "mean"
+      },
+      {
+        "field": "diet_type",
+        "type": "nominal"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

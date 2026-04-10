@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Heatmap: money by coffee_name and Time_of_Day",
+  "width": 600,
+  "height": 400,
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "coffee_name",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "Time_of_Day",
+      "type": "nominal",
+      "scale": {}
+    },
+    "color": {
+      "aggregate": "mean",
+      "field": "money",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "blues"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "coffee_name",
+        "type": "nominal"
+      },
+      {
+        "field": "Time_of_Day",
+        "type": "nominal"
+      },
+      {
+        "field": "money",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

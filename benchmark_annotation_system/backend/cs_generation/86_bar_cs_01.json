@@ -1,0 +1,51 @@
+{
+  "task_type": "clear_single",
+  "task_id": "86_bar_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/86_starbucks_bar.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use sort_bars in order to know Which beverage category has the highest average calories?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Smoothies",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "sort_bars",
+            "reasoning": "Sort bars in descending order to identify the beverage category with highest average calories"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "sort_bars",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "order": "descending"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Beverage_category",
+            "y": "Calories"
+          }
+        }
+      }
+    }
+  ]
+}

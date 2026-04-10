@@ -1,0 +1,52 @@
+{
+  "task_type": "clear_single",
+  "task_id": "30_bar_cs_03",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/30_vitamin_deficiency_disease_dataset_20260123_bar.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_03",
+      "question": "Use sort_bars in order to know Use sort_bars with order equal to descending to rank sun exposure levels by average vitamin D percent RDA. Which sun exposure level has the highest average vitamin D percent RDA?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "High",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "sort_bars",
+            "reasoning": "Sort bars in descending order to identify the sun exposure level with the highest average vitamin D percent RDA"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "sort_bars",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "order": "descending"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "sun_exposure",
+            "y": "vitamin_d_percent_rda",
+            "color": "diet_type"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "task_type": "clear_single",
+  "task_id": "24_parallel_cs_08",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/24_vitamin_deficiency_disease_dataset_20260123_parallel (3).json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_08",
+      "question": "Use hide_dimensions in order to know Use hide_dimensions with mode equal to hide, dimensions equal to vitamin_a_percent_rda, vitamin_c_percent_rda, vitamin_d_percent_rda to focus on BMI and symptoms count. Which alcohol consumption group shows the highest mean symptoms count?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Heavy",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "hide_dimensions",
+            "reasoning": "Hide vitamin dimensions to focus on BMI and symptoms count, then identify which alcohol consumption group has the highest mean symptoms count"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "hide_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "dimensions": [
+                    "hide",
+                    "vitamin_a_percent_rda",
+                    "vitamin_c_percent_rda",
+                    "vitamin_d_percent_rda"
+                  ],
+                  "mode": "hide"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension"
+          }
+        }
+      }
+    }
+  ]
+}

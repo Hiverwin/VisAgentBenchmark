@@ -1,0 +1,52 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Scatter Plot: vitamin_a_percent_rda vs vitamin_e_percent_rda",
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "point",
+    "filled": true,
+    "opacity": 0.7
+  },
+  "encoding": {
+    "x": {
+      "field": "vitamin_a_percent_rda",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "y": {
+      "field": "vitamin_e_percent_rda",
+      "type": "quantitative",
+      "scale": {}
+    },
+    "color": {
+      "field": "gender",
+      "type": "nominal",
+      "scale": {}
+    },
+    "size": {
+      "field": "symptoms_count",
+      "type": "quantitative"
+    },
+    "tooltip": [
+      {
+        "field": "vitamin_a_percent_rda",
+        "type": "quantitative"
+      },
+      {
+        "field": "vitamin_e_percent_rda",
+        "type": "quantitative"
+      },
+      {
+        "field": "gender",
+        "type": "nominal"
+      },
+      {
+        "field": "symptoms_count",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

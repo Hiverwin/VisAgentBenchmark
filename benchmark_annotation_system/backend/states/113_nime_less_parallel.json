@@ -1,0 +1,434 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Parallel: anime_less",
+  "width": 600,
+  "height": 400,
+  "encoding": {
+    "x": {
+      "field": "dimension",
+      "type": "nominal",
+      "sort": [
+        "score",
+        "popularity",
+        "members",
+        "episodes"
+      ],
+      "axis": {
+        "title": null,
+        "labelAngle": 0
+      },
+      "scale": {}
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "score"
+          },
+          {
+            "dimension": "popularity"
+          },
+          {
+            "dimension": "members"
+          },
+          {
+            "dimension": "episodes"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#ccc"
+      },
+      "encoding": {}
+    },
+    {
+      "mark": {
+        "type": "line",
+        "opacity": 0.5,
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "normalized_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "detail": {
+          "field": "_index",
+          "type": "nominal"
+        },
+        "color": {
+          "field": "type",
+          "type": "nominal",
+          "scale": {}
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "score",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 6.05
+          },
+          {
+            "dimension": "score",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 7.53
+          },
+          {
+            "dimension": "score",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 9.29
+          },
+          {
+            "dimension": "popularity",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 3.0
+          },
+          {
+            "dimension": "popularity",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 3298.0
+          },
+          {
+            "dimension": "popularity",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 17963.0
+          },
+          {
+            "dimension": "members",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 502.0
+          },
+          {
+            "dimension": "members",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 55202.0
+          },
+          {
+            "dimension": "members",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 3602700.0
+          },
+          {
+            "dimension": "episodes",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "episodes",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 12.0
+          },
+          {
+            "dimension": "episodes",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 720.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'max'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "score",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 6.05
+          },
+          {
+            "dimension": "score",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 7.53
+          },
+          {
+            "dimension": "score",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 9.29
+          },
+          {
+            "dimension": "popularity",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 3.0
+          },
+          {
+            "dimension": "popularity",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 3298.0
+          },
+          {
+            "dimension": "popularity",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 17963.0
+          },
+          {
+            "dimension": "members",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 502.0
+          },
+          {
+            "dimension": "members",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 55202.0
+          },
+          {
+            "dimension": "members",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 3602700.0
+          },
+          {
+            "dimension": "episodes",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "episodes",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 12.0
+          },
+          {
+            "dimension": "episodes",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 720.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'mid'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "score",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 6.05
+          },
+          {
+            "dimension": "score",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 7.53
+          },
+          {
+            "dimension": "score",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 9.29
+          },
+          {
+            "dimension": "popularity",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 3.0
+          },
+          {
+            "dimension": "popularity",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 3298.0
+          },
+          {
+            "dimension": "popularity",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 17963.0
+          },
+          {
+            "dimension": "members",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 502.0
+          },
+          {
+            "dimension": "members",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 55202.0
+          },
+          {
+            "dimension": "members",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 3602700.0
+          },
+          {
+            "dimension": "episodes",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "episodes",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 12.0
+          },
+          {
+            "dimension": "episodes",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 720.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'min'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "axisX": {
+      "domain": false,
+      "labelAngle": 0,
+      "tickColor": "#ccc",
+      "title": null
+    },
+    "view": {
+      "stroke": null
+    },
+    "style": {
+      "label": {
+        "baseline": "middle",
+        "align": "right",
+        "dx": -5
+      },
+      "tick": {
+        "orient": "horizontal"
+      }
+    }
+  },
+  "transform": [],
+  "params": []
+}

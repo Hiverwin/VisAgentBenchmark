@@ -1,0 +1,588 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Parallel: Heart_Disease_Prediction",
+  "width": 600,
+  "height": 400,
+  "encoding": {
+    "x": {
+      "field": "dimension",
+      "type": "nominal",
+      "sort": [
+        "Age",
+        "BP",
+        "Cholesterol",
+        "Max HR",
+        "ST depression",
+        "Thallium"
+      ],
+      "axis": {
+        "title": null,
+        "labelAngle": 0
+      },
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "dimension",
+        "type": "nominal"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Age"
+          },
+          {
+            "dimension": "BP"
+          },
+          {
+            "dimension": "Cholesterol"
+          },
+          {
+            "dimension": "Max HR"
+          },
+          {
+            "dimension": "ST depression"
+          },
+          {
+            "dimension": "Thallium"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#ccc"
+      },
+      "encoding": {}
+    },
+    {
+      "mark": {
+        "type": "line",
+        "opacity": 0.5,
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "normalized_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "detail": {
+          "field": "_index",
+          "type": "nominal"
+        },
+        "color": {
+          "field": "Heart Disease",
+          "type": "nominal",
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "dimension",
+            "type": "nominal"
+          },
+          {
+            "field": "normalized_value",
+            "type": "quantitative"
+          },
+          {
+            "field": "Heart Disease",
+            "type": "nominal"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Age",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 29.0
+          },
+          {
+            "dimension": "Age",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 55.0
+          },
+          {
+            "dimension": "Age",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 77.0
+          },
+          {
+            "dimension": "BP",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 94.0
+          },
+          {
+            "dimension": "BP",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 130.0
+          },
+          {
+            "dimension": "BP",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 200.0
+          },
+          {
+            "dimension": "Cholesterol",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 126.0
+          },
+          {
+            "dimension": "Cholesterol",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 245.0
+          },
+          {
+            "dimension": "Cholesterol",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 564.0
+          },
+          {
+            "dimension": "Max HR",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 71.0
+          },
+          {
+            "dimension": "Max HR",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 153.5
+          },
+          {
+            "dimension": "Max HR",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 202.0
+          },
+          {
+            "dimension": "ST depression",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0
+          },
+          {
+            "dimension": "ST depression",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 0.8
+          },
+          {
+            "dimension": "ST depression",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 6.2
+          },
+          {
+            "dimension": "Thallium",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 3.0
+          },
+          {
+            "dimension": "Thallium",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 3.0
+          },
+          {
+            "dimension": "Thallium",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 7.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'max'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Age",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 29.0
+          },
+          {
+            "dimension": "Age",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 55.0
+          },
+          {
+            "dimension": "Age",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 77.0
+          },
+          {
+            "dimension": "BP",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 94.0
+          },
+          {
+            "dimension": "BP",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 130.0
+          },
+          {
+            "dimension": "BP",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 200.0
+          },
+          {
+            "dimension": "Cholesterol",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 126.0
+          },
+          {
+            "dimension": "Cholesterol",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 245.0
+          },
+          {
+            "dimension": "Cholesterol",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 564.0
+          },
+          {
+            "dimension": "Max HR",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 71.0
+          },
+          {
+            "dimension": "Max HR",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 153.5
+          },
+          {
+            "dimension": "Max HR",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 202.0
+          },
+          {
+            "dimension": "ST depression",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0
+          },
+          {
+            "dimension": "ST depression",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 0.8
+          },
+          {
+            "dimension": "ST depression",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 6.2
+          },
+          {
+            "dimension": "Thallium",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 3.0
+          },
+          {
+            "dimension": "Thallium",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 3.0
+          },
+          {
+            "dimension": "Thallium",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 7.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'mid'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Age",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 29.0
+          },
+          {
+            "dimension": "Age",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 55.0
+          },
+          {
+            "dimension": "Age",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 77.0
+          },
+          {
+            "dimension": "BP",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 94.0
+          },
+          {
+            "dimension": "BP",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 130.0
+          },
+          {
+            "dimension": "BP",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 200.0
+          },
+          {
+            "dimension": "Cholesterol",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 126.0
+          },
+          {
+            "dimension": "Cholesterol",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 245.0
+          },
+          {
+            "dimension": "Cholesterol",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 564.0
+          },
+          {
+            "dimension": "Max HR",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 71.0
+          },
+          {
+            "dimension": "Max HR",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 153.5
+          },
+          {
+            "dimension": "Max HR",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 202.0
+          },
+          {
+            "dimension": "ST depression",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0
+          },
+          {
+            "dimension": "ST depression",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 0.8
+          },
+          {
+            "dimension": "ST depression",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 6.2
+          },
+          {
+            "dimension": "Thallium",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 3.0
+          },
+          {
+            "dimension": "Thallium",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 3.0
+          },
+          {
+            "dimension": "Thallium",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 7.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'min'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "axisX": {
+      "domain": false,
+      "labelAngle": 0,
+      "tickColor": "#ccc",
+      "title": null
+    },
+    "view": {
+      "stroke": null
+    },
+    "style": {
+      "label": {
+        "baseline": "middle",
+        "align": "right",
+        "dx": -5
+      },
+      "tick": {
+        "orient": "horizontal"
+      }
+    }
+  },
+  "transform": [],
+  "params": []
+}

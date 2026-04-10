@@ -1,0 +1,53 @@
+{
+  "task_type": "clear_single",
+  "task_id": "40_heatmap_cs_02",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/40_insurance_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cs_02",
+      "question": "Use highlight_region_by_value with min_value equal to 30000.0 in order to know Use highlight_region_by_value with min_value equal to 30000 to see how many cells have mean charges greater than 30000.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "5",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_region_by_value",
+            "reasoning": "Highlight cells with mean charges greater than 30000 to count how many cells exceed this threshold"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_region_by_value",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "min_value": 30000.0,
+                  "outside_opacity": 0.12
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "children",
+            "y": "smoker",
+            "color": "charges"
+          }
+        }
+      }
+    }
+  ]
+}

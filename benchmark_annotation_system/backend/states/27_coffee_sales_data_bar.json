@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Bar Chart: money by coffee_name",
+  "width": 600,
+  "height": 400,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "coffee_name",
+      "type": "nominal",
+      "scale": {}
+    },
+    "y": {
+      "field": "money",
+      "type": "quantitative",
+      "aggregate": "mean",
+      "scale": {}
+    },
+    "color": {
+      "field": "Time_of_Day",
+      "type": "nominal",
+      "scale": {}
+    },
+    "tooltip": [
+      {
+        "field": "coffee_name",
+        "type": "nominal"
+      },
+      {
+        "field": "money",
+        "type": "quantitative",
+        "aggregate": "mean"
+      },
+      {
+        "field": "Time_of_Day",
+        "type": "nominal"
+      }
+    ]
+  },
+  "transform": [],
+  "params": []
+}

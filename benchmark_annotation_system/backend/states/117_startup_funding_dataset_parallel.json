@@ -1,0 +1,318 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Parallel: startup_funding_dataset (1)",
+  "width": 600,
+  "height": 400,
+  "encoding": {
+    "x": {
+      "field": "dimension",
+      "type": "nominal",
+      "sort": [
+        "Amount Raised (USD)",
+        "Number of Employees"
+      ],
+      "axis": {
+        "title": null,
+        "labelAngle": 0
+      },
+      "scale": {}
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Amount Raised (USD)"
+          },
+          {
+            "dimension": "Number of Employees"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#ccc"
+      },
+      "encoding": {}
+    },
+    {
+      "mark": {
+        "type": "line",
+        "opacity": 0.5,
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "normalized_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        },
+        "detail": {
+          "field": "_index",
+          "type": "nominal"
+        },
+        "color": {
+          "field": "Funding Stage",
+          "type": "nominal",
+          "scale": {}
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Amount Raised (USD)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 50413.0
+          },
+          {
+            "dimension": "Amount Raised (USD)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 32465171.0
+          },
+          {
+            "dimension": "Amount Raised (USD)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 999966985.0
+          },
+          {
+            "dimension": "Number of Employees",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 5.0
+          },
+          {
+            "dimension": "Number of Employees",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 257.0
+          },
+          {
+            "dimension": "Number of Employees",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 500.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'max'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Amount Raised (USD)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 50413.0
+          },
+          {
+            "dimension": "Amount Raised (USD)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 32465171.0
+          },
+          {
+            "dimension": "Amount Raised (USD)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 999966985.0
+          },
+          {
+            "dimension": "Number of Employees",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 5.0
+          },
+          {
+            "dimension": "Number of Employees",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 257.0
+          },
+          {
+            "dimension": "Number of Employees",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 500.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'mid'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Amount Raised (USD)",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 50413.0
+          },
+          {
+            "dimension": "Amount Raised (USD)",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 32465171.0
+          },
+          {
+            "dimension": "Amount Raised (USD)",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 999966985.0
+          },
+          {
+            "dimension": "Number of Employees",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 5.0
+          },
+          {
+            "dimension": "Number of Employees",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 257.0
+          },
+          {
+            "dimension": "Number of Employees",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 500.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'min'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {}
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "axisX": {
+      "domain": false,
+      "labelAngle": 0,
+      "tickColor": "#ccc",
+      "title": null
+    },
+    "view": {
+      "stroke": null
+    },
+    "style": {
+      "label": {
+        "baseline": "middle",
+        "align": "right",
+        "dx": -5
+      },
+      "tick": {
+        "orient": "horizontal"
+      }
+    }
+  },
+  "transform": [],
+  "params": []
+}
