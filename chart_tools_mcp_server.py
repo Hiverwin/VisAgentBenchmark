@@ -60,6 +60,11 @@ def get_tooltip_data(vega_spec: Dict, position: Tuple[float, float]) -> Dict[str
     return _call(vega_spec, common.get_tooltip_data, position=position)
 
 
+@mcp.tool()
+def get_view_spec(vega_spec: Dict) -> Dict[str, Any]:
+    """Return structured view state: mark, encoding, domains, transforms, selections, etc."""
+    from tools import common
+    return _call(vega_spec, common.get_view_spec)
 
 
 # ==================== bar chart tools ====================
@@ -320,13 +325,6 @@ def show_regression(vega_spec: Dict, method: str = "linear") -> Dict[str, Any]:
     return _call(vega_spec, scatter_plot_tools.show_regression, method=method)
 
 
-@mcp.tool()
-def custom_focus_group(vega_spec: Dict, field: str, keep_values: List[Any]) -> Dict[str, Any]:
-    """Custom demo tool: keep only selected group values visible in scatter plot."""
-    from tools import scatter_custom_tools
-    return _call(vega_spec, scatter_custom_tools.custom_focus_group, field=field, keep_values=keep_values)
-
-
 # ==================== Heatmap Tools ====================
 @mcp.tool()
 def adjust_color_scale(vega_spec: Dict, scheme: str = "viridis", domain: List = None) -> Dict[str, Any]:
@@ -548,23 +546,6 @@ def reorder_nodes_in_layer(
 
 
 # ==================== Parallel coordinates tools ====================
-@mcp.tool()
-def filter_dimension(
-    vega_spec: Dict,
-    dimension: Optional[str] = None,
-    range: Optional[List[float]] = None,
-    field: Optional[str] = None,
-    column: Optional[str] = None,
-    value_range: Optional[List[float]] = None,
-    interval: Optional[List[float]] = None,
-) -> Dict[str, Any]:
-    """Remove/filter out the specified dimension axis. dimension: axis name to remove."""
-    from tools import parallel_coordinates_tools
-    dimension = dimension or field or column
-    range = range or value_range or interval
-    return _call(vega_spec, parallel_coordinates_tools.filter_dimension, dimension=dimension, range=range)
-
-
 @mcp.tool()
 def reorder_dimensions(vega_spec: Dict, dimension_order: List[str]) -> Dict[str, Any]:
     """Reorder dimensions (supports fold-based and pre-normalized long format)"""
